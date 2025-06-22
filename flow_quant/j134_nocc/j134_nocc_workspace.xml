@@ -1,0 +1,3517 @@
+<?xml version="1.0" encoding="UTF-8"?>
+	<gating:Gating-ML
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:gating="http://www.isac-net.org/std/Gating-ML/v2.0/gating"
+	xmlns:transforms="http://www.isac-net.org/std/Gating-ML/v2.0/transformations"
+	xmlns:data-type="http://www.isac-net.org/std/Gating-ML/v2.0/datatypes"
+	xmlns:floreada="https://floreada.io/gatingml"
+	xsi:schemaLocation="
+	http://www.isac-net.org/std/Gating-ML/v2.0/gating
+	http://flowcyt.sourceforge.net/gating/2.0/xsd/Gating-ML.v2.0.xsd
+	http://www.isac-net.org/std/Gating-ML/v2.0/transformations
+	http://flowcyt.sourceforge.net/gating/2.0/xsd/Transformations.v2.0.xsd
+	http://www.isac-net.org/std/Gating-ML/v2.0/datatypes
+	http://flowcyt.sourceforge.net/gating/2.0/xsd/DataTypes.v2.0.xsd">
+	<data-type:custom-info>
+		<floreada:workspace>
+			<floreada:fcsfile hash="15808326338703503240" hash-type="xxh64" name="A4 J134_Unstim_DMSO_r1_Plate_003.fcs" pipelines="All Files" >
+				<floreada:parameters>
+					<floreada:parameter name="Time" gating:transformation-ref="logarithmic_100000002004087730000_20.000099182128906" />
+					<floreada:parameter name="SSC-H" gating:transformation-ref="linear_4194304_0" />
+					<floreada:parameter name="SSC-A" gating:transformation-ref="linear_4194304_0" />
+					<floreada:parameter name="FSC-H" gating:transformation-ref="linear_4194304_0" />
+					<floreada:parameter name="FSC-A" gating:transformation-ref="linear_4194304_0" />
+					<floreada:parameter name="SSC-B-H" gating:transformation-ref="linear_4194304_0" />
+					<floreada:parameter name="SSC-B-A" gating:transformation-ref="linear_4194304_0" />
+					<floreada:parameter name="GFP-A" gating:transformation-ref="logarithmic_10000000_8" />
+					<floreada:parameter name="PE-A" gating:transformation-ref="logarithmic_10000000_8" />
+					<floreada:parameter name="APC-A" gating:transformation-ref="logarithmic_10000000_8" />
+				</floreada:parameters>
+				<floreada:display>
+					<floreada:xparameter>
+						<floreada:parameter name="FSC-H"/>
+						<floreada:parameter name="FSC-H"/>
+						<floreada:parameter name="FSC-H"/>
+						<floreada:parameter name="FSC-H"/>
+					</floreada:xparameter>
+					<floreada:yparameter>
+						<floreada:parameter name="SSC-H"/>
+						<floreada:parameter name="SSC-H"/>
+						<floreada:parameter name="SSC-H"/>
+						<floreada:parameter name="SSC-H"/>
+					</floreada:yparameter>
+				</floreada:display>
+				<floreada:fcscompensation pipelines="">
+					<floreada:parameters>
+						<floreada:parameter name="GFP-A" gating:transformation-ref="logarithmic_10000000_8" />
+						<floreada:parameter name="PE-A" gating:transformation-ref="logarithmic_10000000_8" />
+						<floreada:parameter name="APC-A" gating:transformation-ref="logarithmic_10000000_8" />
+					</floreada:parameters>
+					<floreada:display>
+						<floreada:xparameter>
+							<floreada:parameter name="FSC-H"/>
+							<floreada:parameter name="FSC-H"/>
+							<floreada:parameter name="FSC-H"/>
+							<floreada:parameter name="FSC-H"/>
+						</floreada:xparameter>
+						<floreada:yparameter>
+							<floreada:parameter name="SSC-H"/>
+							<floreada:parameter name="SSC-H"/>
+							<floreada:parameter name="SSC-H"/>
+							<floreada:parameter name="SSC-H"/>
+						</floreada:yparameter>
+					</floreada:display>
+				</floreada:fcscompensation>
+				<floreada:gate id="Gate45" name="cells" pipelines="All Files">
+					<floreada:display>
+						<floreada:xparameter>
+							<floreada:parameter name="FSC-H"/>
+							<floreada:parameter name="APC-A"/>
+							<floreada:parameter name="APC-A"/>
+							<floreada:parameter name="APC-A"/>
+						</floreada:xparameter>
+						<floreada:yparameter>
+							<floreada:parameter name="GFP-A"/>
+							<floreada:parameter name="SSC-H"/>
+							<floreada:parameter name="SSC-H"/>
+							<floreada:parameter name="SSC-H"/>
+						</floreada:yparameter>
+					</floreada:display>
+					<floreada:gate id="Gate67" name="GFP+" pipelines="All Files">
+						<floreada:display>
+							<floreada:xparameter>
+								<floreada:parameter name="APC-A"/>
+								<floreada:parameter name="APC-A"/>
+								<floreada:parameter name="APC-A"/>
+								<floreada:parameter name="APC-A"/>
+							</floreada:xparameter>
+							<floreada:yparameter>
+								<floreada:parameter name="SSC-H"/>
+								<floreada:parameter name="SSC-H"/>
+								<floreada:parameter name="SSC-H"/>
+								<floreada:parameter name="SSC-H"/>
+							</floreada:yparameter>
+						</floreada:display>
+						<floreada:gate id="Gate111" name="CD69+" pipelines="All Files">
+							<floreada:display>
+								<floreada:xparameter>
+									<floreada:parameter name="APC-A"/>
+									<floreada:parameter name="APC-A"/>
+									<floreada:parameter name="APC-A"/>
+									<floreada:parameter name="APC-A"/>
+								</floreada:xparameter>
+								<floreada:yparameter>
+									<floreada:parameter name="SSC-H"/>
+									<floreada:parameter name="SSC-H"/>
+									<floreada:parameter name="SSC-H"/>
+									<floreada:parameter name="SSC-H"/>
+								</floreada:yparameter>
+							</floreada:display>
+						</floreada:gate>
+					</floreada:gate>
+				</floreada:gate>
+			</floreada:fcsfile>
+			<floreada:fcsfile hash="1162533965960408428" hash-type="xxh64" name="A5 J134_Unstim_DMSO_r2_Plate_003.fcs" pipelines="All Files" >
+				<floreada:parameters>
+					<floreada:parameter name="Time" gating:transformation-ref="logarithmic_99999998430674940_17.000099182128906" />
+					<floreada:parameter name="SSC-H" gating:transformation-ref="linear_4194304_0" />
+					<floreada:parameter name="SSC-A" gating:transformation-ref="linear_4194304_0" />
+					<floreada:parameter name="FSC-H" gating:transformation-ref="linear_4194304_0" />
+					<floreada:parameter name="FSC-A" gating:transformation-ref="linear_4194304_0" />
+					<floreada:parameter name="SSC-B-H" gating:transformation-ref="linear_4194304_0" />
+					<floreada:parameter name="SSC-B-A" gating:transformation-ref="linear_4194304_0" />
+					<floreada:parameter name="GFP-A" gating:transformation-ref="logarithmic_10000000_8" />
+					<floreada:parameter name="PE-A" gating:transformation-ref="logarithmic_10000000_8" />
+					<floreada:parameter name="APC-A" gating:transformation-ref="logarithmic_10000000_8" />
+				</floreada:parameters>
+				<floreada:display>
+					<floreada:xparameter>
+						<floreada:parameter name="FSC-H"/>
+						<floreada:parameter name="FSC-H"/>
+						<floreada:parameter name="FSC-H"/>
+						<floreada:parameter name="FSC-H"/>
+					</floreada:xparameter>
+					<floreada:yparameter>
+						<floreada:parameter name="SSC-H"/>
+						<floreada:parameter name="SSC-H"/>
+						<floreada:parameter name="SSC-H"/>
+						<floreada:parameter name="SSC-H"/>
+					</floreada:yparameter>
+				</floreada:display>
+				<floreada:fcscompensation pipelines="">
+					<floreada:parameters>
+						<floreada:parameter name="GFP-A" gating:transformation-ref="logarithmic_10000000_8" />
+						<floreada:parameter name="PE-A" gating:transformation-ref="logarithmic_10000000_8" />
+						<floreada:parameter name="APC-A" gating:transformation-ref="logarithmic_10000000_8" />
+					</floreada:parameters>
+					<floreada:display>
+						<floreada:xparameter>
+							<floreada:parameter name="FSC-H"/>
+							<floreada:parameter name="FSC-H"/>
+							<floreada:parameter name="FSC-H"/>
+							<floreada:parameter name="FSC-H"/>
+						</floreada:xparameter>
+						<floreada:yparameter>
+							<floreada:parameter name="SSC-H"/>
+							<floreada:parameter name="SSC-H"/>
+							<floreada:parameter name="SSC-H"/>
+							<floreada:parameter name="SSC-H"/>
+						</floreada:yparameter>
+					</floreada:display>
+				</floreada:fcscompensation>
+				<floreada:gate id="Gate46" name="cells" pipelines="All Files">
+					<floreada:display>
+						<floreada:xparameter>
+							<floreada:parameter name="FSC-H"/>
+							<floreada:parameter name="APC-A"/>
+							<floreada:parameter name="APC-A"/>
+							<floreada:parameter name="APC-A"/>
+						</floreada:xparameter>
+						<floreada:yparameter>
+							<floreada:parameter name="GFP-A"/>
+							<floreada:parameter name="SSC-H"/>
+							<floreada:parameter name="SSC-H"/>
+							<floreada:parameter name="SSC-H"/>
+						</floreada:yparameter>
+					</floreada:display>
+					<floreada:gate id="Gate68" name="GFP+" pipelines="All Files">
+						<floreada:display>
+							<floreada:xparameter>
+								<floreada:parameter name="APC-A"/>
+								<floreada:parameter name="APC-A"/>
+								<floreada:parameter name="APC-A"/>
+								<floreada:parameter name="APC-A"/>
+							</floreada:xparameter>
+							<floreada:yparameter>
+								<floreada:parameter name="SSC-H"/>
+								<floreada:parameter name="SSC-H"/>
+								<floreada:parameter name="SSC-H"/>
+								<floreada:parameter name="SSC-H"/>
+							</floreada:yparameter>
+						</floreada:display>
+						<floreada:gate id="Gate112" name="CD69+" pipelines="All Files">
+							<floreada:display>
+								<floreada:xparameter>
+									<floreada:parameter name="APC-A"/>
+									<floreada:parameter name="APC-A"/>
+									<floreada:parameter name="APC-A"/>
+									<floreada:parameter name="APC-A"/>
+								</floreada:xparameter>
+								<floreada:yparameter>
+									<floreada:parameter name="SSC-H"/>
+									<floreada:parameter name="SSC-H"/>
+									<floreada:parameter name="SSC-H"/>
+									<floreada:parameter name="SSC-H"/>
+								</floreada:yparameter>
+							</floreada:display>
+						</floreada:gate>
+					</floreada:gate>
+				</floreada:gate>
+			</floreada:fcsfile>
+			<floreada:fcsfile hash="6573837546088894612" hash-type="xxh64" name="A6 J134_Unstim_DMSO_r3_Plate_003.fcs" pipelines="All Files" >
+				<floreada:parameters>
+					<floreada:parameter name="Time" gating:transformation-ref="logarithmic_99999998430674940_17.000099182128906" />
+					<floreada:parameter name="SSC-H" gating:transformation-ref="linear_4194304_0" />
+					<floreada:parameter name="SSC-A" gating:transformation-ref="linear_4194304_0" />
+					<floreada:parameter name="FSC-H" gating:transformation-ref="linear_4194304_0" />
+					<floreada:parameter name="FSC-A" gating:transformation-ref="linear_4194304_0" />
+					<floreada:parameter name="SSC-B-H" gating:transformation-ref="linear_4194304_0" />
+					<floreada:parameter name="SSC-B-A" gating:transformation-ref="linear_4194304_0" />
+					<floreada:parameter name="GFP-A" gating:transformation-ref="logarithmic_10000000_8" />
+					<floreada:parameter name="PE-A" gating:transformation-ref="logarithmic_10000000_8" />
+					<floreada:parameter name="APC-A" gating:transformation-ref="logarithmic_10000000_8" />
+				</floreada:parameters>
+				<floreada:display>
+					<floreada:xparameter>
+						<floreada:parameter name="FSC-H"/>
+						<floreada:parameter name="FSC-H"/>
+						<floreada:parameter name="FSC-H"/>
+						<floreada:parameter name="FSC-H"/>
+					</floreada:xparameter>
+					<floreada:yparameter>
+						<floreada:parameter name="SSC-H"/>
+						<floreada:parameter name="SSC-H"/>
+						<floreada:parameter name="SSC-H"/>
+						<floreada:parameter name="SSC-H"/>
+					</floreada:yparameter>
+				</floreada:display>
+				<floreada:fcscompensation pipelines="">
+					<floreada:parameters>
+						<floreada:parameter name="GFP-A" gating:transformation-ref="logarithmic_10000000_8" />
+						<floreada:parameter name="PE-A" gating:transformation-ref="logarithmic_10000000_8" />
+						<floreada:parameter name="APC-A" gating:transformation-ref="logarithmic_10000000_8" />
+					</floreada:parameters>
+					<floreada:display>
+						<floreada:xparameter>
+							<floreada:parameter name="FSC-H"/>
+							<floreada:parameter name="FSC-H"/>
+							<floreada:parameter name="FSC-H"/>
+							<floreada:parameter name="FSC-H"/>
+						</floreada:xparameter>
+						<floreada:yparameter>
+							<floreada:parameter name="SSC-H"/>
+							<floreada:parameter name="SSC-H"/>
+							<floreada:parameter name="SSC-H"/>
+							<floreada:parameter name="SSC-H"/>
+						</floreada:yparameter>
+					</floreada:display>
+				</floreada:fcscompensation>
+				<floreada:gate id="Gate47" name="cells" pipelines="All Files">
+					<floreada:display>
+						<floreada:xparameter>
+							<floreada:parameter name="FSC-H"/>
+							<floreada:parameter name="APC-A"/>
+							<floreada:parameter name="APC-A"/>
+							<floreada:parameter name="APC-A"/>
+						</floreada:xparameter>
+						<floreada:yparameter>
+							<floreada:parameter name="GFP-A"/>
+							<floreada:parameter name="SSC-H"/>
+							<floreada:parameter name="SSC-H"/>
+							<floreada:parameter name="SSC-H"/>
+						</floreada:yparameter>
+					</floreada:display>
+					<floreada:gate id="Gate69" name="GFP+" pipelines="All Files">
+						<floreada:display>
+							<floreada:xparameter>
+								<floreada:parameter name="APC-A"/>
+								<floreada:parameter name="APC-A"/>
+								<floreada:parameter name="APC-A"/>
+								<floreada:parameter name="APC-A"/>
+							</floreada:xparameter>
+							<floreada:yparameter>
+								<floreada:parameter name="SSC-H"/>
+								<floreada:parameter name="SSC-H"/>
+								<floreada:parameter name="SSC-H"/>
+								<floreada:parameter name="SSC-H"/>
+							</floreada:yparameter>
+						</floreada:display>
+						<floreada:gate id="Gate113" name="CD69+" pipelines="All Files">
+							<floreada:display>
+								<floreada:xparameter>
+									<floreada:parameter name="APC-A"/>
+									<floreada:parameter name="APC-A"/>
+									<floreada:parameter name="APC-A"/>
+									<floreada:parameter name="APC-A"/>
+								</floreada:xparameter>
+								<floreada:yparameter>
+									<floreada:parameter name="SSC-H"/>
+									<floreada:parameter name="SSC-H"/>
+									<floreada:parameter name="SSC-H"/>
+									<floreada:parameter name="SSC-H"/>
+								</floreada:yparameter>
+							</floreada:display>
+						</floreada:gate>
+					</floreada:gate>
+				</floreada:gate>
+			</floreada:fcsfile>
+			<floreada:fcsfile hash="13895103132830052907" hash-type="xxh64" name="B4 J134_Unstim_pp1_r1_Plate_003.fcs" pipelines="All Files" >
+				<floreada:parameters>
+					<floreada:parameter name="Time" gating:transformation-ref="logarithmic_9.999999778196308e+21_22.000099182128906" />
+					<floreada:parameter name="SSC-H" gating:transformation-ref="linear_4194304_0" />
+					<floreada:parameter name="SSC-A" gating:transformation-ref="linear_4194304_0" />
+					<floreada:parameter name="FSC-H" gating:transformation-ref="linear_4194304_0" />
+					<floreada:parameter name="FSC-A" gating:transformation-ref="linear_4194304_0" />
+					<floreada:parameter name="SSC-B-H" gating:transformation-ref="linear_4194304_0" />
+					<floreada:parameter name="SSC-B-A" gating:transformation-ref="linear_4194304_0" />
+					<floreada:parameter name="GFP-A" gating:transformation-ref="logarithmic_10000000_8" />
+					<floreada:parameter name="PE-A" gating:transformation-ref="logarithmic_10000000_8" />
+					<floreada:parameter name="APC-A" gating:transformation-ref="logarithmic_10000000_8" />
+				</floreada:parameters>
+				<floreada:display>
+					<floreada:xparameter>
+						<floreada:parameter name="FSC-H"/>
+						<floreada:parameter name="FSC-H"/>
+						<floreada:parameter name="FSC-H"/>
+						<floreada:parameter name="FSC-H"/>
+					</floreada:xparameter>
+					<floreada:yparameter>
+						<floreada:parameter name="SSC-H"/>
+						<floreada:parameter name="SSC-H"/>
+						<floreada:parameter name="SSC-H"/>
+						<floreada:parameter name="SSC-H"/>
+					</floreada:yparameter>
+				</floreada:display>
+				<floreada:fcscompensation pipelines="">
+					<floreada:parameters>
+						<floreada:parameter name="GFP-A" gating:transformation-ref="logarithmic_10000000_8" />
+						<floreada:parameter name="PE-A" gating:transformation-ref="logarithmic_10000000_8" />
+						<floreada:parameter name="APC-A" gating:transformation-ref="logarithmic_10000000_8" />
+					</floreada:parameters>
+					<floreada:display>
+						<floreada:xparameter>
+							<floreada:parameter name="FSC-H"/>
+							<floreada:parameter name="FSC-H"/>
+							<floreada:parameter name="FSC-H"/>
+							<floreada:parameter name="FSC-H"/>
+						</floreada:xparameter>
+						<floreada:yparameter>
+							<floreada:parameter name="SSC-H"/>
+							<floreada:parameter name="SSC-H"/>
+							<floreada:parameter name="SSC-H"/>
+							<floreada:parameter name="SSC-H"/>
+						</floreada:yparameter>
+					</floreada:display>
+				</floreada:fcscompensation>
+				<floreada:gate id="Gate48" name="cells" pipelines="All Files">
+					<floreada:display>
+						<floreada:xparameter>
+							<floreada:parameter name="FSC-H"/>
+							<floreada:parameter name="APC-A"/>
+							<floreada:parameter name="APC-A"/>
+							<floreada:parameter name="APC-A"/>
+						</floreada:xparameter>
+						<floreada:yparameter>
+							<floreada:parameter name="GFP-A"/>
+							<floreada:parameter name="SSC-H"/>
+							<floreada:parameter name="SSC-H"/>
+							<floreada:parameter name="SSC-H"/>
+						</floreada:yparameter>
+					</floreada:display>
+					<floreada:gate id="Gate70" name="GFP+" pipelines="All Files">
+						<floreada:display>
+							<floreada:xparameter>
+								<floreada:parameter name="APC-A"/>
+								<floreada:parameter name="APC-A"/>
+								<floreada:parameter name="APC-A"/>
+								<floreada:parameter name="APC-A"/>
+							</floreada:xparameter>
+							<floreada:yparameter>
+								<floreada:parameter name="SSC-H"/>
+								<floreada:parameter name="SSC-H"/>
+								<floreada:parameter name="SSC-H"/>
+								<floreada:parameter name="SSC-H"/>
+							</floreada:yparameter>
+						</floreada:display>
+						<floreada:gate id="Gate114" name="CD69+" pipelines="All Files">
+							<floreada:display>
+								<floreada:xparameter>
+									<floreada:parameter name="APC-A"/>
+									<floreada:parameter name="APC-A"/>
+									<floreada:parameter name="APC-A"/>
+									<floreada:parameter name="APC-A"/>
+								</floreada:xparameter>
+								<floreada:yparameter>
+									<floreada:parameter name="SSC-H"/>
+									<floreada:parameter name="SSC-H"/>
+									<floreada:parameter name="SSC-H"/>
+									<floreada:parameter name="SSC-H"/>
+								</floreada:yparameter>
+							</floreada:display>
+						</floreada:gate>
+					</floreada:gate>
+				</floreada:gate>
+			</floreada:fcsfile>
+			<floreada:fcsfile hash="14074825279989626995" hash-type="xxh64" name="B5 J134_Unstim_pp1_r2_Plate_003.fcs" pipelines="All Files" >
+				<floreada:parameters>
+					<floreada:parameter name="Time" gating:transformation-ref="logarithmic_100000002004087730000_20.000099182128906" />
+					<floreada:parameter name="SSC-H" gating:transformation-ref="linear_4194304_0" />
+					<floreada:parameter name="SSC-A" gating:transformation-ref="linear_4194304_0" />
+					<floreada:parameter name="FSC-H" gating:transformation-ref="linear_4194304_0" />
+					<floreada:parameter name="FSC-A" gating:transformation-ref="linear_4194304_0" />
+					<floreada:parameter name="SSC-B-H" gating:transformation-ref="linear_4194304_0" />
+					<floreada:parameter name="SSC-B-A" gating:transformation-ref="linear_4194304_0" />
+					<floreada:parameter name="GFP-A" gating:transformation-ref="logarithmic_10000000_8" />
+					<floreada:parameter name="PE-A" gating:transformation-ref="logarithmic_10000000_8" />
+					<floreada:parameter name="APC-A" gating:transformation-ref="logarithmic_10000000_8" />
+				</floreada:parameters>
+				<floreada:display>
+					<floreada:xparameter>
+						<floreada:parameter name="FSC-H"/>
+						<floreada:parameter name="FSC-H"/>
+						<floreada:parameter name="FSC-H"/>
+						<floreada:parameter name="FSC-H"/>
+					</floreada:xparameter>
+					<floreada:yparameter>
+						<floreada:parameter name="SSC-H"/>
+						<floreada:parameter name="SSC-H"/>
+						<floreada:parameter name="SSC-H"/>
+						<floreada:parameter name="SSC-H"/>
+					</floreada:yparameter>
+				</floreada:display>
+				<floreada:fcscompensation pipelines="">
+					<floreada:parameters>
+						<floreada:parameter name="GFP-A" gating:transformation-ref="logarithmic_10000000_8" />
+						<floreada:parameter name="PE-A" gating:transformation-ref="logarithmic_10000000_8" />
+						<floreada:parameter name="APC-A" gating:transformation-ref="logarithmic_10000000_8" />
+					</floreada:parameters>
+					<floreada:display>
+						<floreada:xparameter>
+							<floreada:parameter name="FSC-H"/>
+							<floreada:parameter name="FSC-H"/>
+							<floreada:parameter name="FSC-H"/>
+							<floreada:parameter name="FSC-H"/>
+						</floreada:xparameter>
+						<floreada:yparameter>
+							<floreada:parameter name="SSC-H"/>
+							<floreada:parameter name="SSC-H"/>
+							<floreada:parameter name="SSC-H"/>
+							<floreada:parameter name="SSC-H"/>
+						</floreada:yparameter>
+					</floreada:display>
+				</floreada:fcscompensation>
+				<floreada:gate id="Gate49" name="cells" pipelines="All Files">
+					<floreada:display>
+						<floreada:xparameter>
+							<floreada:parameter name="FSC-H"/>
+							<floreada:parameter name="APC-A"/>
+							<floreada:parameter name="APC-A"/>
+							<floreada:parameter name="APC-A"/>
+						</floreada:xparameter>
+						<floreada:yparameter>
+							<floreada:parameter name="GFP-A"/>
+							<floreada:parameter name="SSC-H"/>
+							<floreada:parameter name="SSC-H"/>
+							<floreada:parameter name="SSC-H"/>
+						</floreada:yparameter>
+					</floreada:display>
+					<floreada:gate id="Gate71" name="GFP+" pipelines="All Files">
+						<floreada:display>
+							<floreada:xparameter>
+								<floreada:parameter name="APC-A"/>
+								<floreada:parameter name="APC-A"/>
+								<floreada:parameter name="APC-A"/>
+								<floreada:parameter name="APC-A"/>
+							</floreada:xparameter>
+							<floreada:yparameter>
+								<floreada:parameter name="SSC-H"/>
+								<floreada:parameter name="SSC-H"/>
+								<floreada:parameter name="SSC-H"/>
+								<floreada:parameter name="SSC-H"/>
+							</floreada:yparameter>
+						</floreada:display>
+						<floreada:gate id="Gate115" name="CD69+" pipelines="All Files">
+							<floreada:display>
+								<floreada:xparameter>
+									<floreada:parameter name="APC-A"/>
+									<floreada:parameter name="APC-A"/>
+									<floreada:parameter name="APC-A"/>
+									<floreada:parameter name="APC-A"/>
+								</floreada:xparameter>
+								<floreada:yparameter>
+									<floreada:parameter name="SSC-H"/>
+									<floreada:parameter name="SSC-H"/>
+									<floreada:parameter name="SSC-H"/>
+									<floreada:parameter name="SSC-H"/>
+								</floreada:yparameter>
+							</floreada:display>
+						</floreada:gate>
+					</floreada:gate>
+				</floreada:gate>
+			</floreada:fcsfile>
+			<floreada:fcsfile hash="7149127467393868336" hash-type="xxh64" name="B6 J134_Unstim_pp1_r3_Plate_003.fcs" pipelines="All Files" >
+				<floreada:parameters>
+					<floreada:parameter name="Time" gating:transformation-ref="logarithmic_9.999999778196308e+22_23.000099182128906" />
+					<floreada:parameter name="SSC-H" gating:transformation-ref="linear_4194304_0" />
+					<floreada:parameter name="SSC-A" gating:transformation-ref="linear_4194304_0" />
+					<floreada:parameter name="FSC-H" gating:transformation-ref="linear_4194304_0" />
+					<floreada:parameter name="FSC-A" gating:transformation-ref="linear_4194304_0" />
+					<floreada:parameter name="SSC-B-H" gating:transformation-ref="linear_4194304_0" />
+					<floreada:parameter name="SSC-B-A" gating:transformation-ref="linear_4194304_0" />
+					<floreada:parameter name="GFP-A" gating:transformation-ref="logarithmic_10000000_8" />
+					<floreada:parameter name="PE-A" gating:transformation-ref="logarithmic_10000000_8" />
+					<floreada:parameter name="APC-A" gating:transformation-ref="logarithmic_10000000_8" />
+				</floreada:parameters>
+				<floreada:display>
+					<floreada:xparameter>
+						<floreada:parameter name="FSC-H"/>
+						<floreada:parameter name="FSC-H"/>
+						<floreada:parameter name="FSC-H"/>
+						<floreada:parameter name="FSC-H"/>
+					</floreada:xparameter>
+					<floreada:yparameter>
+						<floreada:parameter name="SSC-H"/>
+						<floreada:parameter name="SSC-H"/>
+						<floreada:parameter name="SSC-H"/>
+						<floreada:parameter name="SSC-H"/>
+					</floreada:yparameter>
+				</floreada:display>
+				<floreada:fcscompensation pipelines="">
+					<floreada:parameters>
+						<floreada:parameter name="GFP-A" gating:transformation-ref="logarithmic_10000000_8" />
+						<floreada:parameter name="PE-A" gating:transformation-ref="logarithmic_10000000_8" />
+						<floreada:parameter name="APC-A" gating:transformation-ref="logarithmic_10000000_8" />
+					</floreada:parameters>
+					<floreada:display>
+						<floreada:xparameter>
+							<floreada:parameter name="FSC-H"/>
+							<floreada:parameter name="FSC-H"/>
+							<floreada:parameter name="FSC-H"/>
+							<floreada:parameter name="FSC-H"/>
+						</floreada:xparameter>
+						<floreada:yparameter>
+							<floreada:parameter name="SSC-H"/>
+							<floreada:parameter name="SSC-H"/>
+							<floreada:parameter name="SSC-H"/>
+							<floreada:parameter name="SSC-H"/>
+						</floreada:yparameter>
+					</floreada:display>
+				</floreada:fcscompensation>
+				<floreada:gate id="Gate50" name="cells" pipelines="All Files">
+					<floreada:display>
+						<floreada:xparameter>
+							<floreada:parameter name="FSC-H"/>
+							<floreada:parameter name="APC-A"/>
+							<floreada:parameter name="APC-A"/>
+							<floreada:parameter name="APC-A"/>
+						</floreada:xparameter>
+						<floreada:yparameter>
+							<floreada:parameter name="GFP-A"/>
+							<floreada:parameter name="SSC-H"/>
+							<floreada:parameter name="SSC-H"/>
+							<floreada:parameter name="SSC-H"/>
+						</floreada:yparameter>
+					</floreada:display>
+					<floreada:gate id="Gate72" name="GFP+" pipelines="All Files">
+						<floreada:display>
+							<floreada:xparameter>
+								<floreada:parameter name="APC-A"/>
+								<floreada:parameter name="APC-A"/>
+								<floreada:parameter name="APC-A"/>
+								<floreada:parameter name="APC-A"/>
+							</floreada:xparameter>
+							<floreada:yparameter>
+								<floreada:parameter name="SSC-H"/>
+								<floreada:parameter name="SSC-H"/>
+								<floreada:parameter name="SSC-H"/>
+								<floreada:parameter name="SSC-H"/>
+							</floreada:yparameter>
+						</floreada:display>
+						<floreada:gate id="Gate116" name="CD69+" pipelines="All Files">
+							<floreada:display>
+								<floreada:xparameter>
+									<floreada:parameter name="APC-A"/>
+									<floreada:parameter name="APC-A"/>
+									<floreada:parameter name="APC-A"/>
+									<floreada:parameter name="APC-A"/>
+								</floreada:xparameter>
+								<floreada:yparameter>
+									<floreada:parameter name="SSC-H"/>
+									<floreada:parameter name="SSC-H"/>
+									<floreada:parameter name="SSC-H"/>
+									<floreada:parameter name="SSC-H"/>
+								</floreada:yparameter>
+							</floreada:display>
+						</floreada:gate>
+					</floreada:gate>
+				</floreada:gate>
+			</floreada:fcsfile>
+			<floreada:fcsfile hash="546384012669884149" hash-type="xxh64" name="C4 J134_unstim_soq_r1_Plate_003.fcs" pipelines="All Files" >
+				<floreada:parameters>
+					<floreada:parameter name="Time" gating:transformation-ref="logarithmic_1.0000000200408773e+21_21.000099182128906" />
+					<floreada:parameter name="SSC-H" gating:transformation-ref="linear_4194304_0" />
+					<floreada:parameter name="SSC-A" gating:transformation-ref="linear_4194304_0" />
+					<floreada:parameter name="FSC-H" gating:transformation-ref="linear_4194304_0" />
+					<floreada:parameter name="FSC-A" gating:transformation-ref="linear_4194304_0" />
+					<floreada:parameter name="SSC-B-H" gating:transformation-ref="linear_4194304_0" />
+					<floreada:parameter name="SSC-B-A" gating:transformation-ref="linear_4194304_0" />
+					<floreada:parameter name="GFP-A" gating:transformation-ref="logarithmic_10000000_8" />
+					<floreada:parameter name="PE-A" gating:transformation-ref="logarithmic_10000000_8" />
+					<floreada:parameter name="APC-A" gating:transformation-ref="logarithmic_10000000_8" />
+				</floreada:parameters>
+				<floreada:display>
+					<floreada:xparameter>
+						<floreada:parameter name="FSC-H"/>
+						<floreada:parameter name="FSC-H"/>
+						<floreada:parameter name="FSC-H"/>
+						<floreada:parameter name="FSC-H"/>
+					</floreada:xparameter>
+					<floreada:yparameter>
+						<floreada:parameter name="SSC-H"/>
+						<floreada:parameter name="SSC-H"/>
+						<floreada:parameter name="SSC-H"/>
+						<floreada:parameter name="SSC-H"/>
+					</floreada:yparameter>
+				</floreada:display>
+				<floreada:fcscompensation pipelines="">
+					<floreada:parameters>
+						<floreada:parameter name="GFP-A" gating:transformation-ref="logarithmic_10000000_8" />
+						<floreada:parameter name="PE-A" gating:transformation-ref="logarithmic_10000000_8" />
+						<floreada:parameter name="APC-A" gating:transformation-ref="logarithmic_10000000_8" />
+					</floreada:parameters>
+					<floreada:display>
+						<floreada:xparameter>
+							<floreada:parameter name="FSC-H"/>
+							<floreada:parameter name="FSC-H"/>
+							<floreada:parameter name="FSC-H"/>
+							<floreada:parameter name="FSC-H"/>
+						</floreada:xparameter>
+						<floreada:yparameter>
+							<floreada:parameter name="SSC-H"/>
+							<floreada:parameter name="SSC-H"/>
+							<floreada:parameter name="SSC-H"/>
+							<floreada:parameter name="SSC-H"/>
+						</floreada:yparameter>
+					</floreada:display>
+				</floreada:fcscompensation>
+				<floreada:gate id="Gate51" name="cells" pipelines="All Files">
+					<floreada:display>
+						<floreada:xparameter>
+							<floreada:parameter name="FSC-H"/>
+							<floreada:parameter name="APC-A"/>
+							<floreada:parameter name="APC-A"/>
+							<floreada:parameter name="APC-A"/>
+						</floreada:xparameter>
+						<floreada:yparameter>
+							<floreada:parameter name="GFP-A"/>
+							<floreada:parameter name="SSC-H"/>
+							<floreada:parameter name="SSC-H"/>
+							<floreada:parameter name="SSC-H"/>
+						</floreada:yparameter>
+					</floreada:display>
+					<floreada:gate id="Gate73" name="GFP+" pipelines="All Files">
+						<floreada:display>
+							<floreada:xparameter>
+								<floreada:parameter name="APC-A"/>
+								<floreada:parameter name="APC-A"/>
+								<floreada:parameter name="APC-A"/>
+								<floreada:parameter name="APC-A"/>
+							</floreada:xparameter>
+							<floreada:yparameter>
+								<floreada:parameter name="SSC-H"/>
+								<floreada:parameter name="SSC-H"/>
+								<floreada:parameter name="SSC-H"/>
+								<floreada:parameter name="SSC-H"/>
+							</floreada:yparameter>
+						</floreada:display>
+						<floreada:gate id="Gate117" name="CD69+" pipelines="All Files">
+							<floreada:display>
+								<floreada:xparameter>
+									<floreada:parameter name="APC-A"/>
+									<floreada:parameter name="APC-A"/>
+									<floreada:parameter name="APC-A"/>
+									<floreada:parameter name="APC-A"/>
+								</floreada:xparameter>
+								<floreada:yparameter>
+									<floreada:parameter name="SSC-H"/>
+									<floreada:parameter name="SSC-H"/>
+									<floreada:parameter name="SSC-H"/>
+									<floreada:parameter name="SSC-H"/>
+								</floreada:yparameter>
+							</floreada:display>
+						</floreada:gate>
+					</floreada:gate>
+				</floreada:gate>
+			</floreada:fcsfile>
+			<floreada:fcsfile hash="10980469024377262986" hash-type="xxh64" name="C5 J134_unstim_soq_r2_Plate_003.fcs" pipelines="All Files" >
+				<floreada:parameters>
+					<floreada:parameter name="Time" gating:transformation-ref="logarithmic_99999998430674940_17.000099182128906" />
+					<floreada:parameter name="SSC-H" gating:transformation-ref="linear_4194304_0" />
+					<floreada:parameter name="SSC-A" gating:transformation-ref="linear_4194304_0" />
+					<floreada:parameter name="FSC-H" gating:transformation-ref="linear_4194304_0" />
+					<floreada:parameter name="FSC-A" gating:transformation-ref="linear_4194304_0" />
+					<floreada:parameter name="SSC-B-H" gating:transformation-ref="linear_4194304_0" />
+					<floreada:parameter name="SSC-B-A" gating:transformation-ref="linear_4194304_0" />
+					<floreada:parameter name="GFP-A" gating:transformation-ref="logarithmic_10000000_8" />
+					<floreada:parameter name="PE-A" gating:transformation-ref="logarithmic_10000000_8" />
+					<floreada:parameter name="APC-A" gating:transformation-ref="logarithmic_10000000_8" />
+				</floreada:parameters>
+				<floreada:display>
+					<floreada:xparameter>
+						<floreada:parameter name="FSC-H"/>
+						<floreada:parameter name="FSC-H"/>
+						<floreada:parameter name="FSC-H"/>
+						<floreada:parameter name="FSC-H"/>
+					</floreada:xparameter>
+					<floreada:yparameter>
+						<floreada:parameter name="SSC-H"/>
+						<floreada:parameter name="SSC-H"/>
+						<floreada:parameter name="SSC-H"/>
+						<floreada:parameter name="SSC-H"/>
+					</floreada:yparameter>
+				</floreada:display>
+				<floreada:fcscompensation pipelines="">
+					<floreada:parameters>
+						<floreada:parameter name="GFP-A" gating:transformation-ref="logarithmic_10000000_8" />
+						<floreada:parameter name="PE-A" gating:transformation-ref="logarithmic_10000000_8" />
+						<floreada:parameter name="APC-A" gating:transformation-ref="logarithmic_10000000_8" />
+					</floreada:parameters>
+					<floreada:display>
+						<floreada:xparameter>
+							<floreada:parameter name="FSC-H"/>
+							<floreada:parameter name="FSC-H"/>
+							<floreada:parameter name="FSC-H"/>
+							<floreada:parameter name="FSC-H"/>
+						</floreada:xparameter>
+						<floreada:yparameter>
+							<floreada:parameter name="SSC-H"/>
+							<floreada:parameter name="SSC-H"/>
+							<floreada:parameter name="SSC-H"/>
+							<floreada:parameter name="SSC-H"/>
+						</floreada:yparameter>
+					</floreada:display>
+				</floreada:fcscompensation>
+				<floreada:gate id="Gate52" name="cells" pipelines="All Files">
+					<floreada:display>
+						<floreada:xparameter>
+							<floreada:parameter name="FSC-H"/>
+							<floreada:parameter name="APC-A"/>
+							<floreada:parameter name="APC-A"/>
+							<floreada:parameter name="APC-A"/>
+						</floreada:xparameter>
+						<floreada:yparameter>
+							<floreada:parameter name="GFP-A"/>
+							<floreada:parameter name="SSC-H"/>
+							<floreada:parameter name="SSC-H"/>
+							<floreada:parameter name="SSC-H"/>
+						</floreada:yparameter>
+					</floreada:display>
+					<floreada:gate id="Gate74" name="GFP+" pipelines="All Files">
+						<floreada:display>
+							<floreada:xparameter>
+								<floreada:parameter name="APC-A"/>
+								<floreada:parameter name="APC-A"/>
+								<floreada:parameter name="APC-A"/>
+								<floreada:parameter name="APC-A"/>
+							</floreada:xparameter>
+							<floreada:yparameter>
+								<floreada:parameter name="SSC-H"/>
+								<floreada:parameter name="SSC-H"/>
+								<floreada:parameter name="SSC-H"/>
+								<floreada:parameter name="SSC-H"/>
+							</floreada:yparameter>
+						</floreada:display>
+						<floreada:gate id="Gate118" name="CD69+" pipelines="All Files">
+							<floreada:display>
+								<floreada:xparameter>
+									<floreada:parameter name="APC-A"/>
+									<floreada:parameter name="APC-A"/>
+									<floreada:parameter name="APC-A"/>
+									<floreada:parameter name="APC-A"/>
+								</floreada:xparameter>
+								<floreada:yparameter>
+									<floreada:parameter name="SSC-H"/>
+									<floreada:parameter name="SSC-H"/>
+									<floreada:parameter name="SSC-H"/>
+									<floreada:parameter name="SSC-H"/>
+								</floreada:yparameter>
+							</floreada:display>
+						</floreada:gate>
+					</floreada:gate>
+				</floreada:gate>
+			</floreada:fcsfile>
+			<floreada:fcsfile hash="1609046432577942998" hash-type="xxh64" name="C6 J134_unstim_soq_r3_Plate_003.fcs" pipelines="All Files" >
+				<floreada:parameters>
+					<floreada:parameter name="Time" gating:transformation-ref="logarithmic_99999998430674940_17.000099182128906" />
+					<floreada:parameter name="SSC-H" gating:transformation-ref="linear_4194304_0" />
+					<floreada:parameter name="SSC-A" gating:transformation-ref="linear_4194304_0" />
+					<floreada:parameter name="FSC-H" gating:transformation-ref="linear_4194304_0" />
+					<floreada:parameter name="FSC-A" gating:transformation-ref="linear_4194304_0" />
+					<floreada:parameter name="SSC-B-H" gating:transformation-ref="linear_4194304_0" />
+					<floreada:parameter name="SSC-B-A" gating:transformation-ref="linear_4194304_0" />
+					<floreada:parameter name="GFP-A" gating:transformation-ref="logarithmic_10000000_8" />
+					<floreada:parameter name="PE-A" gating:transformation-ref="logarithmic_10000000_8" />
+					<floreada:parameter name="APC-A" gating:transformation-ref="logarithmic_10000000_8" />
+				</floreada:parameters>
+				<floreada:display>
+					<floreada:xparameter>
+						<floreada:parameter name="FSC-H"/>
+						<floreada:parameter name="FSC-H"/>
+						<floreada:parameter name="FSC-H"/>
+						<floreada:parameter name="FSC-H"/>
+					</floreada:xparameter>
+					<floreada:yparameter>
+						<floreada:parameter name="SSC-H"/>
+						<floreada:parameter name="SSC-H"/>
+						<floreada:parameter name="SSC-H"/>
+						<floreada:parameter name="SSC-H"/>
+					</floreada:yparameter>
+				</floreada:display>
+				<floreada:fcscompensation pipelines="">
+					<floreada:parameters>
+						<floreada:parameter name="GFP-A" gating:transformation-ref="logarithmic_10000000_8" />
+						<floreada:parameter name="PE-A" gating:transformation-ref="logarithmic_10000000_8" />
+						<floreada:parameter name="APC-A" gating:transformation-ref="logarithmic_10000000_8" />
+					</floreada:parameters>
+					<floreada:display>
+						<floreada:xparameter>
+							<floreada:parameter name="FSC-H"/>
+							<floreada:parameter name="FSC-H"/>
+							<floreada:parameter name="FSC-H"/>
+							<floreada:parameter name="FSC-H"/>
+						</floreada:xparameter>
+						<floreada:yparameter>
+							<floreada:parameter name="SSC-H"/>
+							<floreada:parameter name="SSC-H"/>
+							<floreada:parameter name="SSC-H"/>
+							<floreada:parameter name="SSC-H"/>
+						</floreada:yparameter>
+					</floreada:display>
+				</floreada:fcscompensation>
+				<floreada:gate id="Gate53" name="cells" pipelines="All Files">
+					<floreada:display>
+						<floreada:xparameter>
+							<floreada:parameter name="FSC-H"/>
+							<floreada:parameter name="APC-A"/>
+							<floreada:parameter name="APC-A"/>
+							<floreada:parameter name="APC-A"/>
+						</floreada:xparameter>
+						<floreada:yparameter>
+							<floreada:parameter name="GFP-A"/>
+							<floreada:parameter name="SSC-H"/>
+							<floreada:parameter name="SSC-H"/>
+							<floreada:parameter name="SSC-H"/>
+						</floreada:yparameter>
+					</floreada:display>
+					<floreada:gate id="Gate75" name="GFP+" pipelines="All Files">
+						<floreada:display>
+							<floreada:xparameter>
+								<floreada:parameter name="APC-A"/>
+								<floreada:parameter name="APC-A"/>
+								<floreada:parameter name="APC-A"/>
+								<floreada:parameter name="APC-A"/>
+							</floreada:xparameter>
+							<floreada:yparameter>
+								<floreada:parameter name="SSC-H"/>
+								<floreada:parameter name="SSC-H"/>
+								<floreada:parameter name="SSC-H"/>
+								<floreada:parameter name="SSC-H"/>
+							</floreada:yparameter>
+						</floreada:display>
+						<floreada:gate id="Gate119" name="CD69+" pipelines="All Files">
+							<floreada:display>
+								<floreada:xparameter>
+									<floreada:parameter name="APC-A"/>
+									<floreada:parameter name="APC-A"/>
+									<floreada:parameter name="APC-A"/>
+									<floreada:parameter name="APC-A"/>
+								</floreada:xparameter>
+								<floreada:yparameter>
+									<floreada:parameter name="SSC-H"/>
+									<floreada:parameter name="SSC-H"/>
+									<floreada:parameter name="SSC-H"/>
+									<floreada:parameter name="SSC-H"/>
+								</floreada:yparameter>
+							</floreada:display>
+						</floreada:gate>
+					</floreada:gate>
+				</floreada:gate>
+			</floreada:fcsfile>
+			<floreada:fcsfile hash="17659747287164720187" hash-type="xxh64" name="D4 J134_unstim_U0126_r1_Plate_003.fcs" pipelines="All Files" >
+				<floreada:parameters>
+					<floreada:parameter name="Time" gating:transformation-ref="logarithmic_9999999980506448000_19.000099182128906" />
+					<floreada:parameter name="SSC-H" gating:transformation-ref="linear_4194304_0" />
+					<floreada:parameter name="SSC-A" gating:transformation-ref="linear_4194304_0" />
+					<floreada:parameter name="FSC-H" gating:transformation-ref="linear_4194304_0" />
+					<floreada:parameter name="FSC-A" gating:transformation-ref="linear_4194304_0" />
+					<floreada:parameter name="SSC-B-H" gating:transformation-ref="linear_4194304_0" />
+					<floreada:parameter name="SSC-B-A" gating:transformation-ref="linear_4194304_0" />
+					<floreada:parameter name="GFP-A" gating:transformation-ref="logarithmic_10000000_8" />
+					<floreada:parameter name="PE-A" gating:transformation-ref="logarithmic_10000000_8" />
+					<floreada:parameter name="APC-A" gating:transformation-ref="logarithmic_10000000_8" />
+				</floreada:parameters>
+				<floreada:display>
+					<floreada:xparameter>
+						<floreada:parameter name="FSC-H"/>
+						<floreada:parameter name="FSC-H"/>
+						<floreada:parameter name="FSC-H"/>
+						<floreada:parameter name="FSC-H"/>
+					</floreada:xparameter>
+					<floreada:yparameter>
+						<floreada:parameter name="SSC-H"/>
+						<floreada:parameter name="SSC-H"/>
+						<floreada:parameter name="SSC-H"/>
+						<floreada:parameter name="SSC-H"/>
+					</floreada:yparameter>
+				</floreada:display>
+				<floreada:fcscompensation pipelines="">
+					<floreada:parameters>
+						<floreada:parameter name="GFP-A" gating:transformation-ref="logarithmic_10000000_8" />
+						<floreada:parameter name="PE-A" gating:transformation-ref="logarithmic_10000000_8" />
+						<floreada:parameter name="APC-A" gating:transformation-ref="logarithmic_10000000_8" />
+					</floreada:parameters>
+					<floreada:display>
+						<floreada:xparameter>
+							<floreada:parameter name="FSC-H"/>
+							<floreada:parameter name="FSC-H"/>
+							<floreada:parameter name="FSC-H"/>
+							<floreada:parameter name="FSC-H"/>
+						</floreada:xparameter>
+						<floreada:yparameter>
+							<floreada:parameter name="SSC-H"/>
+							<floreada:parameter name="SSC-H"/>
+							<floreada:parameter name="SSC-H"/>
+							<floreada:parameter name="SSC-H"/>
+						</floreada:yparameter>
+					</floreada:display>
+				</floreada:fcscompensation>
+				<floreada:gate id="Gate54" name="cells" pipelines="All Files">
+					<floreada:display>
+						<floreada:xparameter>
+							<floreada:parameter name="FSC-H"/>
+							<floreada:parameter name="APC-A"/>
+							<floreada:parameter name="APC-A"/>
+							<floreada:parameter name="APC-A"/>
+						</floreada:xparameter>
+						<floreada:yparameter>
+							<floreada:parameter name="GFP-A"/>
+							<floreada:parameter name="SSC-H"/>
+							<floreada:parameter name="SSC-H"/>
+							<floreada:parameter name="SSC-H"/>
+						</floreada:yparameter>
+					</floreada:display>
+					<floreada:gate id="Gate76" name="GFP+" pipelines="All Files">
+						<floreada:display>
+							<floreada:xparameter>
+								<floreada:parameter name="APC-A"/>
+								<floreada:parameter name="APC-A"/>
+								<floreada:parameter name="APC-A"/>
+								<floreada:parameter name="APC-A"/>
+							</floreada:xparameter>
+							<floreada:yparameter>
+								<floreada:parameter name="SSC-H"/>
+								<floreada:parameter name="SSC-H"/>
+								<floreada:parameter name="SSC-H"/>
+								<floreada:parameter name="SSC-H"/>
+							</floreada:yparameter>
+						</floreada:display>
+						<floreada:gate id="Gate120" name="CD69+" pipelines="All Files">
+							<floreada:display>
+								<floreada:xparameter>
+									<floreada:parameter name="APC-A"/>
+									<floreada:parameter name="APC-A"/>
+									<floreada:parameter name="APC-A"/>
+									<floreada:parameter name="APC-A"/>
+								</floreada:xparameter>
+								<floreada:yparameter>
+									<floreada:parameter name="SSC-H"/>
+									<floreada:parameter name="SSC-H"/>
+									<floreada:parameter name="SSC-H"/>
+									<floreada:parameter name="SSC-H"/>
+								</floreada:yparameter>
+							</floreada:display>
+						</floreada:gate>
+					</floreada:gate>
+				</floreada:gate>
+			</floreada:fcsfile>
+			<floreada:fcsfile hash="360312022939019744" hash-type="xxh64" name="D5 J134_unstim_U0126_r2_Plate_003.fcs" pipelines="All Files" >
+				<floreada:parameters>
+					<floreada:parameter name="Time" gating:transformation-ref="logarithmic_999999984306749400_18.000099182128906" />
+					<floreada:parameter name="SSC-H" gating:transformation-ref="linear_4194304_0" />
+					<floreada:parameter name="SSC-A" gating:transformation-ref="linear_4194304_0" />
+					<floreada:parameter name="FSC-H" gating:transformation-ref="linear_4194304_0" />
+					<floreada:parameter name="FSC-A" gating:transformation-ref="linear_4194304_0" />
+					<floreada:parameter name="SSC-B-H" gating:transformation-ref="linear_4194304_0" />
+					<floreada:parameter name="SSC-B-A" gating:transformation-ref="linear_4194304_0" />
+					<floreada:parameter name="GFP-A" gating:transformation-ref="logarithmic_10000000_8" />
+					<floreada:parameter name="PE-A" gating:transformation-ref="logarithmic_10000000_8" />
+					<floreada:parameter name="APC-A" gating:transformation-ref="logarithmic_10000000_8" />
+				</floreada:parameters>
+				<floreada:display>
+					<floreada:xparameter>
+						<floreada:parameter name="FSC-H"/>
+						<floreada:parameter name="FSC-H"/>
+						<floreada:parameter name="FSC-H"/>
+						<floreada:parameter name="FSC-H"/>
+					</floreada:xparameter>
+					<floreada:yparameter>
+						<floreada:parameter name="SSC-H"/>
+						<floreada:parameter name="SSC-H"/>
+						<floreada:parameter name="SSC-H"/>
+						<floreada:parameter name="SSC-H"/>
+					</floreada:yparameter>
+				</floreada:display>
+				<floreada:fcscompensation pipelines="">
+					<floreada:parameters>
+						<floreada:parameter name="GFP-A" gating:transformation-ref="logarithmic_10000000_8" />
+						<floreada:parameter name="PE-A" gating:transformation-ref="logarithmic_10000000_8" />
+						<floreada:parameter name="APC-A" gating:transformation-ref="logarithmic_10000000_8" />
+					</floreada:parameters>
+					<floreada:display>
+						<floreada:xparameter>
+							<floreada:parameter name="FSC-H"/>
+							<floreada:parameter name="FSC-H"/>
+							<floreada:parameter name="FSC-H"/>
+							<floreada:parameter name="FSC-H"/>
+						</floreada:xparameter>
+						<floreada:yparameter>
+							<floreada:parameter name="SSC-H"/>
+							<floreada:parameter name="SSC-H"/>
+							<floreada:parameter name="SSC-H"/>
+							<floreada:parameter name="SSC-H"/>
+						</floreada:yparameter>
+					</floreada:display>
+				</floreada:fcscompensation>
+				<floreada:gate id="Gate55" name="cells" pipelines="All Files">
+					<floreada:display>
+						<floreada:xparameter>
+							<floreada:parameter name="FSC-H"/>
+							<floreada:parameter name="APC-A"/>
+							<floreada:parameter name="APC-A"/>
+							<floreada:parameter name="APC-A"/>
+						</floreada:xparameter>
+						<floreada:yparameter>
+							<floreada:parameter name="GFP-A"/>
+							<floreada:parameter name="SSC-H"/>
+							<floreada:parameter name="SSC-H"/>
+							<floreada:parameter name="SSC-H"/>
+						</floreada:yparameter>
+					</floreada:display>
+					<floreada:gate id="Gate77" name="GFP+" pipelines="All Files">
+						<floreada:display>
+							<floreada:xparameter>
+								<floreada:parameter name="APC-A"/>
+								<floreada:parameter name="APC-A"/>
+								<floreada:parameter name="APC-A"/>
+								<floreada:parameter name="APC-A"/>
+							</floreada:xparameter>
+							<floreada:yparameter>
+								<floreada:parameter name="SSC-H"/>
+								<floreada:parameter name="SSC-H"/>
+								<floreada:parameter name="SSC-H"/>
+								<floreada:parameter name="SSC-H"/>
+							</floreada:yparameter>
+						</floreada:display>
+						<floreada:gate id="Gate121" name="CD69+" pipelines="All Files">
+							<floreada:display>
+								<floreada:xparameter>
+									<floreada:parameter name="APC-A"/>
+									<floreada:parameter name="APC-A"/>
+									<floreada:parameter name="APC-A"/>
+									<floreada:parameter name="APC-A"/>
+								</floreada:xparameter>
+								<floreada:yparameter>
+									<floreada:parameter name="SSC-H"/>
+									<floreada:parameter name="SSC-H"/>
+									<floreada:parameter name="SSC-H"/>
+									<floreada:parameter name="SSC-H"/>
+								</floreada:yparameter>
+							</floreada:display>
+						</floreada:gate>
+					</floreada:gate>
+				</floreada:gate>
+			</floreada:fcsfile>
+			<floreada:fcsfile hash="2549909562301191607" hash-type="xxh64" name="D6 J134_unstim_U0126_r3_Plate_003.fcs" pipelines="All Files" >
+				<floreada:parameters>
+					<floreada:parameter name="Time" gating:transformation-ref="logarithmic_9999999980506448000_19.000099182128906" />
+					<floreada:parameter name="SSC-H" gating:transformation-ref="linear_4194304_0" />
+					<floreada:parameter name="SSC-A" gating:transformation-ref="linear_4194304_0" />
+					<floreada:parameter name="FSC-H" gating:transformation-ref="linear_4194304_0" />
+					<floreada:parameter name="FSC-A" gating:transformation-ref="linear_4194304_0" />
+					<floreada:parameter name="SSC-B-H" gating:transformation-ref="linear_4194304_0" />
+					<floreada:parameter name="SSC-B-A" gating:transformation-ref="linear_4194304_0" />
+					<floreada:parameter name="GFP-A" gating:transformation-ref="logarithmic_10000000_8" />
+					<floreada:parameter name="PE-A" gating:transformation-ref="logarithmic_10000000_8" />
+					<floreada:parameter name="APC-A" gating:transformation-ref="logarithmic_10000000_8" />
+				</floreada:parameters>
+				<floreada:display>
+					<floreada:xparameter>
+						<floreada:parameter name="FSC-H"/>
+						<floreada:parameter name="FSC-H"/>
+						<floreada:parameter name="FSC-H"/>
+						<floreada:parameter name="FSC-H"/>
+					</floreada:xparameter>
+					<floreada:yparameter>
+						<floreada:parameter name="SSC-H"/>
+						<floreada:parameter name="SSC-H"/>
+						<floreada:parameter name="SSC-H"/>
+						<floreada:parameter name="SSC-H"/>
+					</floreada:yparameter>
+				</floreada:display>
+				<floreada:fcscompensation pipelines="">
+					<floreada:parameters>
+						<floreada:parameter name="GFP-A" gating:transformation-ref="logarithmic_10000000_8" />
+						<floreada:parameter name="PE-A" gating:transformation-ref="logarithmic_10000000_8" />
+						<floreada:parameter name="APC-A" gating:transformation-ref="logarithmic_10000000_8" />
+					</floreada:parameters>
+					<floreada:display>
+						<floreada:xparameter>
+							<floreada:parameter name="FSC-H"/>
+							<floreada:parameter name="FSC-H"/>
+							<floreada:parameter name="FSC-H"/>
+							<floreada:parameter name="FSC-H"/>
+						</floreada:xparameter>
+						<floreada:yparameter>
+							<floreada:parameter name="SSC-H"/>
+							<floreada:parameter name="SSC-H"/>
+							<floreada:parameter name="SSC-H"/>
+							<floreada:parameter name="SSC-H"/>
+						</floreada:yparameter>
+					</floreada:display>
+				</floreada:fcscompensation>
+				<floreada:gate id="Gate56" name="cells" pipelines="All Files">
+					<floreada:display>
+						<floreada:xparameter>
+							<floreada:parameter name="FSC-H"/>
+							<floreada:parameter name="APC-A"/>
+							<floreada:parameter name="APC-A"/>
+							<floreada:parameter name="APC-A"/>
+						</floreada:xparameter>
+						<floreada:yparameter>
+							<floreada:parameter name="GFP-A"/>
+							<floreada:parameter name="SSC-H"/>
+							<floreada:parameter name="SSC-H"/>
+							<floreada:parameter name="SSC-H"/>
+						</floreada:yparameter>
+					</floreada:display>
+					<floreada:gate id="Gate78" name="GFP+" pipelines="All Files">
+						<floreada:display>
+							<floreada:xparameter>
+								<floreada:parameter name="APC-A"/>
+								<floreada:parameter name="APC-A"/>
+								<floreada:parameter name="APC-A"/>
+								<floreada:parameter name="APC-A"/>
+							</floreada:xparameter>
+							<floreada:yparameter>
+								<floreada:parameter name="SSC-H"/>
+								<floreada:parameter name="SSC-H"/>
+								<floreada:parameter name="SSC-H"/>
+								<floreada:parameter name="SSC-H"/>
+							</floreada:yparameter>
+						</floreada:display>
+						<floreada:gate id="Gate122" name="CD69+" pipelines="All Files">
+							<floreada:display>
+								<floreada:xparameter>
+									<floreada:parameter name="APC-A"/>
+									<floreada:parameter name="APC-A"/>
+									<floreada:parameter name="APC-A"/>
+									<floreada:parameter name="APC-A"/>
+								</floreada:xparameter>
+								<floreada:yparameter>
+									<floreada:parameter name="SSC-H"/>
+									<floreada:parameter name="SSC-H"/>
+									<floreada:parameter name="SSC-H"/>
+									<floreada:parameter name="SSC-H"/>
+								</floreada:yparameter>
+							</floreada:display>
+						</floreada:gate>
+					</floreada:gate>
+				</floreada:gate>
+			</floreada:fcsfile>
+			<floreada:fcsfile hash="14784138383545134451" hash-type="xxh64" name="E4 J134_unstim_tpi_r1_Plate_003.fcs" pipelines="All Files" >
+				<floreada:parameters>
+					<floreada:parameter name="Time" gating:transformation-ref="logarithmic_9.999999778196308e+22_23.000099182128906" />
+					<floreada:parameter name="SSC-H" gating:transformation-ref="linear_4194304_0" />
+					<floreada:parameter name="SSC-A" gating:transformation-ref="linear_4194304_0" />
+					<floreada:parameter name="FSC-H" gating:transformation-ref="linear_4194304_0" />
+					<floreada:parameter name="FSC-A" gating:transformation-ref="linear_4194304_0" />
+					<floreada:parameter name="SSC-B-H" gating:transformation-ref="linear_4194304_0" />
+					<floreada:parameter name="SSC-B-A" gating:transformation-ref="linear_4194304_0" />
+					<floreada:parameter name="GFP-A" gating:transformation-ref="logarithmic_10000000_8" />
+					<floreada:parameter name="PE-A" gating:transformation-ref="logarithmic_10000000_8" />
+					<floreada:parameter name="APC-A" gating:transformation-ref="logarithmic_10000000_8" />
+				</floreada:parameters>
+				<floreada:display>
+					<floreada:xparameter>
+						<floreada:parameter name="FSC-H"/>
+						<floreada:parameter name="FSC-H"/>
+						<floreada:parameter name="FSC-H"/>
+						<floreada:parameter name="FSC-H"/>
+					</floreada:xparameter>
+					<floreada:yparameter>
+						<floreada:parameter name="SSC-H"/>
+						<floreada:parameter name="SSC-H"/>
+						<floreada:parameter name="SSC-H"/>
+						<floreada:parameter name="SSC-H"/>
+					</floreada:yparameter>
+				</floreada:display>
+				<floreada:fcscompensation pipelines="">
+					<floreada:parameters>
+						<floreada:parameter name="GFP-A" gating:transformation-ref="logarithmic_10000000_8" />
+						<floreada:parameter name="PE-A" gating:transformation-ref="logarithmic_10000000_8" />
+						<floreada:parameter name="APC-A" gating:transformation-ref="logarithmic_10000000_8" />
+					</floreada:parameters>
+					<floreada:display>
+						<floreada:xparameter>
+							<floreada:parameter name="FSC-H"/>
+							<floreada:parameter name="FSC-H"/>
+							<floreada:parameter name="FSC-H"/>
+							<floreada:parameter name="FSC-H"/>
+						</floreada:xparameter>
+						<floreada:yparameter>
+							<floreada:parameter name="SSC-H"/>
+							<floreada:parameter name="SSC-H"/>
+							<floreada:parameter name="SSC-H"/>
+							<floreada:parameter name="SSC-H"/>
+						</floreada:yparameter>
+					</floreada:display>
+				</floreada:fcscompensation>
+				<floreada:gate id="Gate57" name="cells" pipelines="All Files">
+					<floreada:display>
+						<floreada:xparameter>
+							<floreada:parameter name="FSC-H"/>
+							<floreada:parameter name="APC-A"/>
+							<floreada:parameter name="APC-A"/>
+							<floreada:parameter name="APC-A"/>
+						</floreada:xparameter>
+						<floreada:yparameter>
+							<floreada:parameter name="GFP-A"/>
+							<floreada:parameter name="SSC-H"/>
+							<floreada:parameter name="SSC-H"/>
+							<floreada:parameter name="SSC-H"/>
+						</floreada:yparameter>
+					</floreada:display>
+					<floreada:gate id="Gate79" name="GFP+" pipelines="All Files">
+						<floreada:display>
+							<floreada:xparameter>
+								<floreada:parameter name="APC-A"/>
+								<floreada:parameter name="APC-A"/>
+								<floreada:parameter name="APC-A"/>
+								<floreada:parameter name="APC-A"/>
+							</floreada:xparameter>
+							<floreada:yparameter>
+								<floreada:parameter name="SSC-H"/>
+								<floreada:parameter name="SSC-H"/>
+								<floreada:parameter name="SSC-H"/>
+								<floreada:parameter name="SSC-H"/>
+							</floreada:yparameter>
+						</floreada:display>
+						<floreada:gate id="Gate123" name="CD69+" pipelines="All Files">
+							<floreada:display>
+								<floreada:xparameter>
+									<floreada:parameter name="APC-A"/>
+									<floreada:parameter name="APC-A"/>
+									<floreada:parameter name="APC-A"/>
+									<floreada:parameter name="APC-A"/>
+								</floreada:xparameter>
+								<floreada:yparameter>
+									<floreada:parameter name="SSC-H"/>
+									<floreada:parameter name="SSC-H"/>
+									<floreada:parameter name="SSC-H"/>
+									<floreada:parameter name="SSC-H"/>
+								</floreada:yparameter>
+							</floreada:display>
+						</floreada:gate>
+					</floreada:gate>
+				</floreada:gate>
+			</floreada:fcsfile>
+			<floreada:fcsfile hash="9086718565514941223" hash-type="xxh64" name="E5 J134_unstim_tpi_r2_Plate_003.fcs" pipelines="All Files" >
+				<floreada:parameters>
+					<floreada:parameter name="Time" gating:transformation-ref="logarithmic_9.999999778196308e+22_23.000099182128906" />
+					<floreada:parameter name="SSC-H" gating:transformation-ref="linear_4194304_0" />
+					<floreada:parameter name="SSC-A" gating:transformation-ref="linear_4194304_0" />
+					<floreada:parameter name="FSC-H" gating:transformation-ref="linear_4194304_0" />
+					<floreada:parameter name="FSC-A" gating:transformation-ref="linear_4194304_0" />
+					<floreada:parameter name="SSC-B-H" gating:transformation-ref="linear_4194304_0" />
+					<floreada:parameter name="SSC-B-A" gating:transformation-ref="linear_4194304_0" />
+					<floreada:parameter name="GFP-A" gating:transformation-ref="logarithmic_10000000_8" />
+					<floreada:parameter name="PE-A" gating:transformation-ref="logarithmic_10000000_8" />
+					<floreada:parameter name="APC-A" gating:transformation-ref="logarithmic_10000000_8" />
+				</floreada:parameters>
+				<floreada:display>
+					<floreada:xparameter>
+						<floreada:parameter name="FSC-H"/>
+						<floreada:parameter name="FSC-H"/>
+						<floreada:parameter name="FSC-H"/>
+						<floreada:parameter name="FSC-H"/>
+					</floreada:xparameter>
+					<floreada:yparameter>
+						<floreada:parameter name="SSC-H"/>
+						<floreada:parameter name="SSC-H"/>
+						<floreada:parameter name="SSC-H"/>
+						<floreada:parameter name="SSC-H"/>
+					</floreada:yparameter>
+				</floreada:display>
+				<floreada:fcscompensation pipelines="">
+					<floreada:parameters>
+						<floreada:parameter name="GFP-A" gating:transformation-ref="logarithmic_10000000_8" />
+						<floreada:parameter name="PE-A" gating:transformation-ref="logarithmic_10000000_8" />
+						<floreada:parameter name="APC-A" gating:transformation-ref="logarithmic_10000000_8" />
+					</floreada:parameters>
+					<floreada:display>
+						<floreada:xparameter>
+							<floreada:parameter name="FSC-H"/>
+							<floreada:parameter name="FSC-H"/>
+							<floreada:parameter name="FSC-H"/>
+							<floreada:parameter name="FSC-H"/>
+						</floreada:xparameter>
+						<floreada:yparameter>
+							<floreada:parameter name="SSC-H"/>
+							<floreada:parameter name="SSC-H"/>
+							<floreada:parameter name="SSC-H"/>
+							<floreada:parameter name="SSC-H"/>
+						</floreada:yparameter>
+					</floreada:display>
+				</floreada:fcscompensation>
+				<floreada:gate id="Gate58" name="cells" pipelines="All Files">
+					<floreada:display>
+						<floreada:xparameter>
+							<floreada:parameter name="FSC-H"/>
+							<floreada:parameter name="APC-A"/>
+							<floreada:parameter name="APC-A"/>
+							<floreada:parameter name="APC-A"/>
+						</floreada:xparameter>
+						<floreada:yparameter>
+							<floreada:parameter name="GFP-A"/>
+							<floreada:parameter name="SSC-H"/>
+							<floreada:parameter name="SSC-H"/>
+							<floreada:parameter name="SSC-H"/>
+						</floreada:yparameter>
+					</floreada:display>
+					<floreada:gate id="Gate80" name="GFP+" pipelines="All Files">
+						<floreada:display>
+							<floreada:xparameter>
+								<floreada:parameter name="APC-A"/>
+								<floreada:parameter name="APC-A"/>
+								<floreada:parameter name="APC-A"/>
+								<floreada:parameter name="APC-A"/>
+							</floreada:xparameter>
+							<floreada:yparameter>
+								<floreada:parameter name="SSC-H"/>
+								<floreada:parameter name="SSC-H"/>
+								<floreada:parameter name="SSC-H"/>
+								<floreada:parameter name="SSC-H"/>
+							</floreada:yparameter>
+						</floreada:display>
+						<floreada:gate id="Gate124" name="CD69+" pipelines="All Files">
+							<floreada:display>
+								<floreada:xparameter>
+									<floreada:parameter name="APC-A"/>
+									<floreada:parameter name="APC-A"/>
+									<floreada:parameter name="APC-A"/>
+									<floreada:parameter name="APC-A"/>
+								</floreada:xparameter>
+								<floreada:yparameter>
+									<floreada:parameter name="SSC-H"/>
+									<floreada:parameter name="SSC-H"/>
+									<floreada:parameter name="SSC-H"/>
+									<floreada:parameter name="SSC-H"/>
+								</floreada:yparameter>
+							</floreada:display>
+						</floreada:gate>
+					</floreada:gate>
+				</floreada:gate>
+			</floreada:fcsfile>
+			<floreada:fcsfile hash="4428983540255952181" hash-type="xxh64" name="E6 J134_unstim_tpi_r3_Plate_003.fcs" pipelines="All Files" >
+				<floreada:parameters>
+					<floreada:parameter name="Time" gating:transformation-ref="logarithmic_100000002004087730000_20.000099182128906" />
+					<floreada:parameter name="SSC-H" gating:transformation-ref="linear_4194304_0" />
+					<floreada:parameter name="SSC-A" gating:transformation-ref="linear_4194304_0" />
+					<floreada:parameter name="FSC-H" gating:transformation-ref="linear_4194304_0" />
+					<floreada:parameter name="FSC-A" gating:transformation-ref="linear_4194304_0" />
+					<floreada:parameter name="SSC-B-H" gating:transformation-ref="linear_4194304_0" />
+					<floreada:parameter name="SSC-B-A" gating:transformation-ref="linear_4194304_0" />
+					<floreada:parameter name="GFP-A" gating:transformation-ref="logarithmic_10000000_8" />
+					<floreada:parameter name="PE-A" gating:transformation-ref="logarithmic_10000000_8" />
+					<floreada:parameter name="APC-A" gating:transformation-ref="logarithmic_10000000_8" />
+				</floreada:parameters>
+				<floreada:display>
+					<floreada:xparameter>
+						<floreada:parameter name="FSC-H"/>
+						<floreada:parameter name="FSC-H"/>
+						<floreada:parameter name="FSC-H"/>
+						<floreada:parameter name="FSC-H"/>
+					</floreada:xparameter>
+					<floreada:yparameter>
+						<floreada:parameter name="SSC-H"/>
+						<floreada:parameter name="SSC-H"/>
+						<floreada:parameter name="SSC-H"/>
+						<floreada:parameter name="SSC-H"/>
+					</floreada:yparameter>
+				</floreada:display>
+				<floreada:fcscompensation pipelines="">
+					<floreada:parameters>
+						<floreada:parameter name="GFP-A" gating:transformation-ref="logarithmic_10000000_8" />
+						<floreada:parameter name="PE-A" gating:transformation-ref="logarithmic_10000000_8" />
+						<floreada:parameter name="APC-A" gating:transformation-ref="logarithmic_10000000_8" />
+					</floreada:parameters>
+					<floreada:display>
+						<floreada:xparameter>
+							<floreada:parameter name="FSC-H"/>
+							<floreada:parameter name="FSC-H"/>
+							<floreada:parameter name="FSC-H"/>
+							<floreada:parameter name="FSC-H"/>
+						</floreada:xparameter>
+						<floreada:yparameter>
+							<floreada:parameter name="SSC-H"/>
+							<floreada:parameter name="SSC-H"/>
+							<floreada:parameter name="SSC-H"/>
+							<floreada:parameter name="SSC-H"/>
+						</floreada:yparameter>
+					</floreada:display>
+				</floreada:fcscompensation>
+				<floreada:gate id="Gate59" name="cells" pipelines="All Files">
+					<floreada:display>
+						<floreada:xparameter>
+							<floreada:parameter name="FSC-H"/>
+							<floreada:parameter name="APC-A"/>
+							<floreada:parameter name="APC-A"/>
+							<floreada:parameter name="APC-A"/>
+						</floreada:xparameter>
+						<floreada:yparameter>
+							<floreada:parameter name="GFP-A"/>
+							<floreada:parameter name="SSC-H"/>
+							<floreada:parameter name="SSC-H"/>
+							<floreada:parameter name="SSC-H"/>
+						</floreada:yparameter>
+					</floreada:display>
+					<floreada:gate id="Gate81" name="GFP+" pipelines="All Files">
+						<floreada:display>
+							<floreada:xparameter>
+								<floreada:parameter name="APC-A"/>
+								<floreada:parameter name="APC-A"/>
+								<floreada:parameter name="APC-A"/>
+								<floreada:parameter name="APC-A"/>
+							</floreada:xparameter>
+							<floreada:yparameter>
+								<floreada:parameter name="SSC-H"/>
+								<floreada:parameter name="SSC-H"/>
+								<floreada:parameter name="SSC-H"/>
+								<floreada:parameter name="SSC-H"/>
+							</floreada:yparameter>
+						</floreada:display>
+						<floreada:gate id="Gate125" name="CD69+" pipelines="All Files">
+							<floreada:display>
+								<floreada:xparameter>
+									<floreada:parameter name="APC-A"/>
+									<floreada:parameter name="APC-A"/>
+									<floreada:parameter name="APC-A"/>
+									<floreada:parameter name="APC-A"/>
+								</floreada:xparameter>
+								<floreada:yparameter>
+									<floreada:parameter name="SSC-H"/>
+									<floreada:parameter name="SSC-H"/>
+									<floreada:parameter name="SSC-H"/>
+									<floreada:parameter name="SSC-H"/>
+								</floreada:yparameter>
+							</floreada:display>
+						</floreada:gate>
+					</floreada:gate>
+				</floreada:gate>
+			</floreada:fcsfile>
+			<floreada:fcsfile hash="7523228234944089253" hash-type="xxh64" name="F4 J134_unstim_n22_r1_Plate_003.fcs" pipelines="All Files" >
+				<floreada:parameters>
+					<floreada:parameter name="Time" gating:transformation-ref="logarithmic_999999984306749400_18.000099182128906" />
+					<floreada:parameter name="SSC-H" gating:transformation-ref="linear_4194304_0" />
+					<floreada:parameter name="SSC-A" gating:transformation-ref="linear_4194304_0" />
+					<floreada:parameter name="FSC-H" gating:transformation-ref="linear_4194304_0" />
+					<floreada:parameter name="FSC-A" gating:transformation-ref="linear_4194304_0" />
+					<floreada:parameter name="SSC-B-H" gating:transformation-ref="linear_4194304_0" />
+					<floreada:parameter name="SSC-B-A" gating:transformation-ref="linear_4194304_0" />
+					<floreada:parameter name="GFP-A" gating:transformation-ref="logarithmic_10000000_8" />
+					<floreada:parameter name="PE-A" gating:transformation-ref="logarithmic_10000000_8" />
+					<floreada:parameter name="APC-A" gating:transformation-ref="logarithmic_10000000_8" />
+				</floreada:parameters>
+				<floreada:display>
+					<floreada:xparameter>
+						<floreada:parameter name="FSC-H"/>
+						<floreada:parameter name="FSC-H"/>
+						<floreada:parameter name="FSC-H"/>
+						<floreada:parameter name="FSC-H"/>
+					</floreada:xparameter>
+					<floreada:yparameter>
+						<floreada:parameter name="SSC-H"/>
+						<floreada:parameter name="SSC-H"/>
+						<floreada:parameter name="SSC-H"/>
+						<floreada:parameter name="SSC-H"/>
+					</floreada:yparameter>
+				</floreada:display>
+				<floreada:fcscompensation pipelines="">
+					<floreada:parameters>
+						<floreada:parameter name="GFP-A" gating:transformation-ref="logarithmic_10000000_8" />
+						<floreada:parameter name="PE-A" gating:transformation-ref="logarithmic_10000000_8" />
+						<floreada:parameter name="APC-A" gating:transformation-ref="logarithmic_10000000_8" />
+					</floreada:parameters>
+					<floreada:display>
+						<floreada:xparameter>
+							<floreada:parameter name="FSC-H"/>
+							<floreada:parameter name="FSC-H"/>
+							<floreada:parameter name="FSC-H"/>
+							<floreada:parameter name="FSC-H"/>
+						</floreada:xparameter>
+						<floreada:yparameter>
+							<floreada:parameter name="SSC-H"/>
+							<floreada:parameter name="SSC-H"/>
+							<floreada:parameter name="SSC-H"/>
+							<floreada:parameter name="SSC-H"/>
+						</floreada:yparameter>
+					</floreada:display>
+				</floreada:fcscompensation>
+				<floreada:gate id="Gate60" name="cells" pipelines="All Files">
+					<floreada:display>
+						<floreada:xparameter>
+							<floreada:parameter name="FSC-H"/>
+							<floreada:parameter name="APC-A"/>
+							<floreada:parameter name="APC-A"/>
+							<floreada:parameter name="APC-A"/>
+						</floreada:xparameter>
+						<floreada:yparameter>
+							<floreada:parameter name="GFP-A"/>
+							<floreada:parameter name="SSC-H"/>
+							<floreada:parameter name="SSC-H"/>
+							<floreada:parameter name="SSC-H"/>
+						</floreada:yparameter>
+					</floreada:display>
+					<floreada:gate id="Gate82" name="GFP+" pipelines="All Files">
+						<floreada:display>
+							<floreada:xparameter>
+								<floreada:parameter name="APC-A"/>
+								<floreada:parameter name="APC-A"/>
+								<floreada:parameter name="APC-A"/>
+								<floreada:parameter name="APC-A"/>
+							</floreada:xparameter>
+							<floreada:yparameter>
+								<floreada:parameter name="SSC-H"/>
+								<floreada:parameter name="SSC-H"/>
+								<floreada:parameter name="SSC-H"/>
+								<floreada:parameter name="SSC-H"/>
+							</floreada:yparameter>
+						</floreada:display>
+						<floreada:gate id="Gate126" name="CD69+" pipelines="All Files">
+							<floreada:display>
+								<floreada:xparameter>
+									<floreada:parameter name="APC-A"/>
+									<floreada:parameter name="APC-A"/>
+									<floreada:parameter name="APC-A"/>
+									<floreada:parameter name="APC-A"/>
+								</floreada:xparameter>
+								<floreada:yparameter>
+									<floreada:parameter name="SSC-H"/>
+									<floreada:parameter name="SSC-H"/>
+									<floreada:parameter name="SSC-H"/>
+									<floreada:parameter name="SSC-H"/>
+								</floreada:yparameter>
+							</floreada:display>
+						</floreada:gate>
+					</floreada:gate>
+				</floreada:gate>
+			</floreada:fcsfile>
+			<floreada:fcsfile hash="1089447450799508040" hash-type="xxh64" name="F5 J134_unstim_n22_r2_Plate_003.fcs" pipelines="All Files" >
+				<floreada:parameters>
+					<floreada:parameter name="Time" gating:transformation-ref="logarithmic_10000000272564224_16.000099182128906" />
+					<floreada:parameter name="SSC-H" gating:transformation-ref="linear_4194304_0" />
+					<floreada:parameter name="SSC-A" gating:transformation-ref="linear_4194304_0" />
+					<floreada:parameter name="FSC-H" gating:transformation-ref="linear_4194304_0" />
+					<floreada:parameter name="FSC-A" gating:transformation-ref="linear_4194304_0" />
+					<floreada:parameter name="SSC-B-H" gating:transformation-ref="linear_4194304_0" />
+					<floreada:parameter name="SSC-B-A" gating:transformation-ref="linear_4194304_0" />
+					<floreada:parameter name="GFP-A" gating:transformation-ref="logarithmic_10000000_8" />
+					<floreada:parameter name="PE-A" gating:transformation-ref="logarithmic_10000000_8" />
+					<floreada:parameter name="APC-A" gating:transformation-ref="logarithmic_10000000_8" />
+				</floreada:parameters>
+				<floreada:display>
+					<floreada:xparameter>
+						<floreada:parameter name="FSC-H"/>
+						<floreada:parameter name="FSC-H"/>
+						<floreada:parameter name="FSC-H"/>
+						<floreada:parameter name="FSC-H"/>
+					</floreada:xparameter>
+					<floreada:yparameter>
+						<floreada:parameter name="SSC-H"/>
+						<floreada:parameter name="SSC-H"/>
+						<floreada:parameter name="SSC-H"/>
+						<floreada:parameter name="SSC-H"/>
+					</floreada:yparameter>
+				</floreada:display>
+				<floreada:fcscompensation pipelines="">
+					<floreada:parameters>
+						<floreada:parameter name="GFP-A" gating:transformation-ref="logarithmic_10000000_8" />
+						<floreada:parameter name="PE-A" gating:transformation-ref="logarithmic_10000000_8" />
+						<floreada:parameter name="APC-A" gating:transformation-ref="logarithmic_10000000_8" />
+					</floreada:parameters>
+					<floreada:display>
+						<floreada:xparameter>
+							<floreada:parameter name="FSC-H"/>
+							<floreada:parameter name="FSC-H"/>
+							<floreada:parameter name="FSC-H"/>
+							<floreada:parameter name="FSC-H"/>
+						</floreada:xparameter>
+						<floreada:yparameter>
+							<floreada:parameter name="SSC-H"/>
+							<floreada:parameter name="SSC-H"/>
+							<floreada:parameter name="SSC-H"/>
+							<floreada:parameter name="SSC-H"/>
+						</floreada:yparameter>
+					</floreada:display>
+				</floreada:fcscompensation>
+				<floreada:gate id="Gate61" name="cells" pipelines="All Files">
+					<floreada:display>
+						<floreada:xparameter>
+							<floreada:parameter name="FSC-H"/>
+							<floreada:parameter name="APC-A"/>
+							<floreada:parameter name="APC-A"/>
+							<floreada:parameter name="APC-A"/>
+						</floreada:xparameter>
+						<floreada:yparameter>
+							<floreada:parameter name="GFP-A"/>
+							<floreada:parameter name="SSC-H"/>
+							<floreada:parameter name="SSC-H"/>
+							<floreada:parameter name="SSC-H"/>
+						</floreada:yparameter>
+					</floreada:display>
+					<floreada:gate id="Gate83" name="GFP+" pipelines="All Files">
+						<floreada:display>
+							<floreada:xparameter>
+								<floreada:parameter name="APC-A"/>
+								<floreada:parameter name="APC-A"/>
+								<floreada:parameter name="APC-A"/>
+								<floreada:parameter name="APC-A"/>
+							</floreada:xparameter>
+							<floreada:yparameter>
+								<floreada:parameter name="SSC-H"/>
+								<floreada:parameter name="SSC-H"/>
+								<floreada:parameter name="SSC-H"/>
+								<floreada:parameter name="SSC-H"/>
+							</floreada:yparameter>
+						</floreada:display>
+						<floreada:gate id="Gate127" name="CD69+" pipelines="All Files">
+							<floreada:display>
+								<floreada:xparameter>
+									<floreada:parameter name="APC-A"/>
+									<floreada:parameter name="APC-A"/>
+									<floreada:parameter name="APC-A"/>
+									<floreada:parameter name="APC-A"/>
+								</floreada:xparameter>
+								<floreada:yparameter>
+									<floreada:parameter name="SSC-H"/>
+									<floreada:parameter name="SSC-H"/>
+									<floreada:parameter name="SSC-H"/>
+									<floreada:parameter name="SSC-H"/>
+								</floreada:yparameter>
+							</floreada:display>
+						</floreada:gate>
+					</floreada:gate>
+				</floreada:gate>
+			</floreada:fcsfile>
+			<floreada:fcsfile hash="55692372338253158" hash-type="xxh64" name="F6 J134_unstim_n22_r3_Plate_003.fcs" pipelines="All Files" >
+				<floreada:parameters>
+					<floreada:parameter name="Time" gating:transformation-ref="logarithmic_999999984306749400_18.000099182128906" />
+					<floreada:parameter name="SSC-H" gating:transformation-ref="linear_4194304_0" />
+					<floreada:parameter name="SSC-A" gating:transformation-ref="linear_4194304_0" />
+					<floreada:parameter name="FSC-H" gating:transformation-ref="linear_4194304_0" />
+					<floreada:parameter name="FSC-A" gating:transformation-ref="linear_4194304_0" />
+					<floreada:parameter name="SSC-B-H" gating:transformation-ref="linear_4194304_0" />
+					<floreada:parameter name="SSC-B-A" gating:transformation-ref="linear_4194304_0" />
+					<floreada:parameter name="GFP-A" gating:transformation-ref="logarithmic_10000000_8" />
+					<floreada:parameter name="PE-A" gating:transformation-ref="logarithmic_10000000_8" />
+					<floreada:parameter name="APC-A" gating:transformation-ref="logarithmic_10000000_8" />
+				</floreada:parameters>
+				<floreada:display>
+					<floreada:xparameter>
+						<floreada:parameter name="FSC-H"/>
+						<floreada:parameter name="FSC-H"/>
+						<floreada:parameter name="FSC-H"/>
+						<floreada:parameter name="FSC-H"/>
+					</floreada:xparameter>
+					<floreada:yparameter>
+						<floreada:parameter name="SSC-H"/>
+						<floreada:parameter name="SSC-H"/>
+						<floreada:parameter name="SSC-H"/>
+						<floreada:parameter name="SSC-H"/>
+					</floreada:yparameter>
+				</floreada:display>
+				<floreada:fcscompensation pipelines="">
+					<floreada:parameters>
+						<floreada:parameter name="GFP-A" gating:transformation-ref="logarithmic_10000000_8" />
+						<floreada:parameter name="PE-A" gating:transformation-ref="logarithmic_10000000_8" />
+						<floreada:parameter name="APC-A" gating:transformation-ref="logarithmic_10000000_8" />
+					</floreada:parameters>
+					<floreada:display>
+						<floreada:xparameter>
+							<floreada:parameter name="FSC-H"/>
+							<floreada:parameter name="FSC-H"/>
+							<floreada:parameter name="FSC-H"/>
+							<floreada:parameter name="FSC-H"/>
+						</floreada:xparameter>
+						<floreada:yparameter>
+							<floreada:parameter name="SSC-H"/>
+							<floreada:parameter name="SSC-H"/>
+							<floreada:parameter name="SSC-H"/>
+							<floreada:parameter name="SSC-H"/>
+						</floreada:yparameter>
+					</floreada:display>
+				</floreada:fcscompensation>
+				<floreada:gate id="Gate62" name="cells" pipelines="All Files">
+					<floreada:display>
+						<floreada:xparameter>
+							<floreada:parameter name="FSC-H"/>
+							<floreada:parameter name="APC-A"/>
+							<floreada:parameter name="APC-A"/>
+							<floreada:parameter name="APC-A"/>
+						</floreada:xparameter>
+						<floreada:yparameter>
+							<floreada:parameter name="GFP-A"/>
+							<floreada:parameter name="SSC-H"/>
+							<floreada:parameter name="SSC-H"/>
+							<floreada:parameter name="SSC-H"/>
+						</floreada:yparameter>
+					</floreada:display>
+					<floreada:gate id="Gate84" name="GFP+" pipelines="All Files">
+						<floreada:display>
+							<floreada:xparameter>
+								<floreada:parameter name="APC-A"/>
+								<floreada:parameter name="APC-A"/>
+								<floreada:parameter name="APC-A"/>
+								<floreada:parameter name="APC-A"/>
+							</floreada:xparameter>
+							<floreada:yparameter>
+								<floreada:parameter name="SSC-H"/>
+								<floreada:parameter name="SSC-H"/>
+								<floreada:parameter name="SSC-H"/>
+								<floreada:parameter name="SSC-H"/>
+							</floreada:yparameter>
+						</floreada:display>
+						<floreada:gate id="Gate128" name="CD69+" pipelines="All Files">
+							<floreada:display>
+								<floreada:xparameter>
+									<floreada:parameter name="APC-A"/>
+									<floreada:parameter name="APC-A"/>
+									<floreada:parameter name="APC-A"/>
+									<floreada:parameter name="APC-A"/>
+								</floreada:xparameter>
+								<floreada:yparameter>
+									<floreada:parameter name="SSC-H"/>
+									<floreada:parameter name="SSC-H"/>
+									<floreada:parameter name="SSC-H"/>
+									<floreada:parameter name="SSC-H"/>
+								</floreada:yparameter>
+							</floreada:display>
+						</floreada:gate>
+					</floreada:gate>
+				</floreada:gate>
+			</floreada:fcsfile>
+			<floreada:fcsfile hash="14121611240197774488" hash-type="xxh64" name="G4 J134_unstim_pv_r1_Plate_003.fcs" pipelines="All Files" >
+				<floreada:parameters>
+					<floreada:parameter name="Time" gating:transformation-ref="logarithmic_Infinity_57.000099182128906" />
+					<floreada:parameter name="SSC-H" gating:transformation-ref="linear_4194304_0" />
+					<floreada:parameter name="SSC-A" gating:transformation-ref="linear_4194304_0" />
+					<floreada:parameter name="FSC-H" gating:transformation-ref="linear_4194304_0" />
+					<floreada:parameter name="FSC-A" gating:transformation-ref="linear_4194304_0" />
+					<floreada:parameter name="SSC-B-H" gating:transformation-ref="linear_4194304_0" />
+					<floreada:parameter name="SSC-B-A" gating:transformation-ref="linear_4194304_0" />
+					<floreada:parameter name="GFP-A" gating:transformation-ref="logarithmic_10000000_8" />
+					<floreada:parameter name="PE-A" gating:transformation-ref="logarithmic_10000000_8" />
+					<floreada:parameter name="APC-A" gating:transformation-ref="logarithmic_10000000_8" />
+				</floreada:parameters>
+				<floreada:display>
+					<floreada:xparameter>
+						<floreada:parameter name="FSC-H"/>
+						<floreada:parameter name="FSC-H"/>
+						<floreada:parameter name="FSC-H"/>
+						<floreada:parameter name="FSC-H"/>
+					</floreada:xparameter>
+					<floreada:yparameter>
+						<floreada:parameter name="SSC-H"/>
+						<floreada:parameter name="SSC-H"/>
+						<floreada:parameter name="SSC-H"/>
+						<floreada:parameter name="SSC-H"/>
+					</floreada:yparameter>
+				</floreada:display>
+				<floreada:fcscompensation pipelines="">
+					<floreada:parameters>
+						<floreada:parameter name="GFP-A" gating:transformation-ref="logarithmic_10000000_8" />
+						<floreada:parameter name="PE-A" gating:transformation-ref="logarithmic_10000000_8" />
+						<floreada:parameter name="APC-A" gating:transformation-ref="logarithmic_10000000_8" />
+					</floreada:parameters>
+					<floreada:display>
+						<floreada:xparameter>
+							<floreada:parameter name="FSC-H"/>
+							<floreada:parameter name="FSC-H"/>
+							<floreada:parameter name="FSC-H"/>
+							<floreada:parameter name="FSC-H"/>
+						</floreada:xparameter>
+						<floreada:yparameter>
+							<floreada:parameter name="SSC-H"/>
+							<floreada:parameter name="SSC-H"/>
+							<floreada:parameter name="SSC-H"/>
+							<floreada:parameter name="SSC-H"/>
+						</floreada:yparameter>
+					</floreada:display>
+				</floreada:fcscompensation>
+				<floreada:gate id="Gate63" name="cells" pipelines="All Files">
+					<floreada:display>
+						<floreada:xparameter>
+							<floreada:parameter name="FSC-H"/>
+							<floreada:parameter name="APC-A"/>
+							<floreada:parameter name="APC-A"/>
+							<floreada:parameter name="APC-A"/>
+						</floreada:xparameter>
+						<floreada:yparameter>
+							<floreada:parameter name="GFP-A"/>
+							<floreada:parameter name="SSC-H"/>
+							<floreada:parameter name="SSC-H"/>
+							<floreada:parameter name="SSC-H"/>
+						</floreada:yparameter>
+					</floreada:display>
+					<floreada:gate id="Gate85" name="GFP+" pipelines="All Files">
+						<floreada:display>
+							<floreada:xparameter>
+								<floreada:parameter name="APC-A"/>
+								<floreada:parameter name="APC-A"/>
+								<floreada:parameter name="APC-A"/>
+								<floreada:parameter name="APC-A"/>
+							</floreada:xparameter>
+							<floreada:yparameter>
+								<floreada:parameter name="SSC-H"/>
+								<floreada:parameter name="SSC-H"/>
+								<floreada:parameter name="SSC-H"/>
+								<floreada:parameter name="SSC-H"/>
+							</floreada:yparameter>
+						</floreada:display>
+						<floreada:gate id="Gate129" name="CD69+" pipelines="All Files">
+							<floreada:display>
+								<floreada:xparameter>
+									<floreada:parameter name="APC-A"/>
+									<floreada:parameter name="APC-A"/>
+									<floreada:parameter name="APC-A"/>
+									<floreada:parameter name="APC-A"/>
+								</floreada:xparameter>
+								<floreada:yparameter>
+									<floreada:parameter name="SSC-H"/>
+									<floreada:parameter name="SSC-H"/>
+									<floreada:parameter name="SSC-H"/>
+									<floreada:parameter name="SSC-H"/>
+								</floreada:yparameter>
+							</floreada:display>
+						</floreada:gate>
+					</floreada:gate>
+				</floreada:gate>
+			</floreada:fcsfile>
+			<floreada:fcsfile hash="4678846369566068628" hash-type="xxh64" name="G5 J134_unstim_pv_r2_Plate_003.fcs" pipelines="All Files" >
+				<floreada:parameters>
+					<floreada:parameter name="Time" gating:transformation-ref="logarithmic_Infinity_40.000099182128906" />
+					<floreada:parameter name="SSC-H" gating:transformation-ref="linear_4194304_0" />
+					<floreada:parameter name="SSC-A" gating:transformation-ref="linear_4194304_0" />
+					<floreada:parameter name="FSC-H" gating:transformation-ref="linear_4194304_0" />
+					<floreada:parameter name="FSC-A" gating:transformation-ref="linear_4194304_0" />
+					<floreada:parameter name="SSC-B-H" gating:transformation-ref="linear_4194304_0" />
+					<floreada:parameter name="SSC-B-A" gating:transformation-ref="linear_4194304_0" />
+					<floreada:parameter name="GFP-A" gating:transformation-ref="logarithmic_10000000_8" />
+					<floreada:parameter name="PE-A" gating:transformation-ref="logarithmic_10000000_8" />
+					<floreada:parameter name="APC-A" gating:transformation-ref="logarithmic_10000000_8" />
+				</floreada:parameters>
+				<floreada:display>
+					<floreada:xparameter>
+						<floreada:parameter name="FSC-H"/>
+						<floreada:parameter name="FSC-H"/>
+						<floreada:parameter name="FSC-H"/>
+						<floreada:parameter name="FSC-H"/>
+					</floreada:xparameter>
+					<floreada:yparameter>
+						<floreada:parameter name="SSC-H"/>
+						<floreada:parameter name="SSC-H"/>
+						<floreada:parameter name="SSC-H"/>
+						<floreada:parameter name="SSC-H"/>
+					</floreada:yparameter>
+				</floreada:display>
+				<floreada:fcscompensation pipelines="">
+					<floreada:parameters>
+						<floreada:parameter name="GFP-A" gating:transformation-ref="logarithmic_10000000_8" />
+						<floreada:parameter name="PE-A" gating:transformation-ref="logarithmic_10000000_8" />
+						<floreada:parameter name="APC-A" gating:transformation-ref="logarithmic_10000000_8" />
+					</floreada:parameters>
+					<floreada:display>
+						<floreada:xparameter>
+							<floreada:parameter name="FSC-H"/>
+							<floreada:parameter name="FSC-H"/>
+							<floreada:parameter name="FSC-H"/>
+							<floreada:parameter name="FSC-H"/>
+						</floreada:xparameter>
+						<floreada:yparameter>
+							<floreada:parameter name="SSC-H"/>
+							<floreada:parameter name="SSC-H"/>
+							<floreada:parameter name="SSC-H"/>
+							<floreada:parameter name="SSC-H"/>
+						</floreada:yparameter>
+					</floreada:display>
+				</floreada:fcscompensation>
+				<floreada:gate id="Gate64" name="cells" pipelines="All Files">
+					<floreada:display>
+						<floreada:xparameter>
+							<floreada:parameter name="FSC-H"/>
+							<floreada:parameter name="APC-A"/>
+							<floreada:parameter name="APC-A"/>
+							<floreada:parameter name="APC-A"/>
+						</floreada:xparameter>
+						<floreada:yparameter>
+							<floreada:parameter name="GFP-A"/>
+							<floreada:parameter name="SSC-H"/>
+							<floreada:parameter name="SSC-H"/>
+							<floreada:parameter name="SSC-H"/>
+						</floreada:yparameter>
+					</floreada:display>
+					<floreada:gate id="Gate86" name="GFP+" pipelines="All Files">
+						<floreada:display>
+							<floreada:xparameter>
+								<floreada:parameter name="APC-A"/>
+								<floreada:parameter name="APC-A"/>
+								<floreada:parameter name="APC-A"/>
+								<floreada:parameter name="APC-A"/>
+							</floreada:xparameter>
+							<floreada:yparameter>
+								<floreada:parameter name="SSC-H"/>
+								<floreada:parameter name="SSC-H"/>
+								<floreada:parameter name="SSC-H"/>
+								<floreada:parameter name="SSC-H"/>
+							</floreada:yparameter>
+						</floreada:display>
+						<floreada:gate id="Gate130" name="CD69+" pipelines="All Files">
+							<floreada:display>
+								<floreada:xparameter>
+									<floreada:parameter name="APC-A"/>
+									<floreada:parameter name="APC-A"/>
+									<floreada:parameter name="APC-A"/>
+									<floreada:parameter name="APC-A"/>
+								</floreada:xparameter>
+								<floreada:yparameter>
+									<floreada:parameter name="SSC-H"/>
+									<floreada:parameter name="SSC-H"/>
+									<floreada:parameter name="SSC-H"/>
+									<floreada:parameter name="SSC-H"/>
+								</floreada:yparameter>
+							</floreada:display>
+						</floreada:gate>
+					</floreada:gate>
+				</floreada:gate>
+			</floreada:fcsfile>
+			<floreada:fcsfile hash="99056905577452144" hash-type="xxh64" name="G6 J134_unstim_pv_r3_Plate_003.fcs" pipelines="All Files" >
+				<floreada:parameters>
+					<floreada:parameter name="Time" gating:transformation-ref="logarithmic_Infinity_42.000099182128906" />
+					<floreada:parameter name="SSC-H" gating:transformation-ref="linear_4194304_0" />
+					<floreada:parameter name="SSC-A" gating:transformation-ref="linear_4194304_0" />
+					<floreada:parameter name="FSC-H" gating:transformation-ref="linear_4194304_0" />
+					<floreada:parameter name="FSC-A" gating:transformation-ref="linear_4194304_0" />
+					<floreada:parameter name="SSC-B-H" gating:transformation-ref="linear_4194304_0" />
+					<floreada:parameter name="SSC-B-A" gating:transformation-ref="linear_4194304_0" />
+					<floreada:parameter name="GFP-A" gating:transformation-ref="logarithmic_10000000_8" />
+					<floreada:parameter name="PE-A" gating:transformation-ref="logarithmic_10000000_8" />
+					<floreada:parameter name="APC-A" gating:transformation-ref="logarithmic_10000000_8" />
+				</floreada:parameters>
+				<floreada:display>
+					<floreada:xparameter>
+						<floreada:parameter name="FSC-H"/>
+						<floreada:parameter name="FSC-H"/>
+						<floreada:parameter name="FSC-H"/>
+						<floreada:parameter name="FSC-H"/>
+					</floreada:xparameter>
+					<floreada:yparameter>
+						<floreada:parameter name="SSC-H"/>
+						<floreada:parameter name="SSC-H"/>
+						<floreada:parameter name="SSC-H"/>
+						<floreada:parameter name="SSC-H"/>
+					</floreada:yparameter>
+				</floreada:display>
+				<floreada:fcscompensation pipelines="">
+					<floreada:parameters>
+						<floreada:parameter name="GFP-A" gating:transformation-ref="logarithmic_10000000_8" />
+						<floreada:parameter name="PE-A" gating:transformation-ref="logarithmic_10000000_8" />
+						<floreada:parameter name="APC-A" gating:transformation-ref="logarithmic_10000000_8" />
+					</floreada:parameters>
+					<floreada:display>
+						<floreada:xparameter>
+							<floreada:parameter name="FSC-H"/>
+							<floreada:parameter name="FSC-H"/>
+							<floreada:parameter name="FSC-H"/>
+							<floreada:parameter name="FSC-H"/>
+						</floreada:xparameter>
+						<floreada:yparameter>
+							<floreada:parameter name="SSC-H"/>
+							<floreada:parameter name="SSC-H"/>
+							<floreada:parameter name="SSC-H"/>
+							<floreada:parameter name="SSC-H"/>
+						</floreada:yparameter>
+					</floreada:display>
+				</floreada:fcscompensation>
+				<floreada:gate id="Gate65" name="cells" pipelines="All Files">
+					<floreada:display>
+						<floreada:xparameter>
+							<floreada:parameter name="FSC-H"/>
+							<floreada:parameter name="APC-A"/>
+							<floreada:parameter name="APC-A"/>
+							<floreada:parameter name="APC-A"/>
+						</floreada:xparameter>
+						<floreada:yparameter>
+							<floreada:parameter name="GFP-A"/>
+							<floreada:parameter name="SSC-H"/>
+							<floreada:parameter name="SSC-H"/>
+							<floreada:parameter name="SSC-H"/>
+						</floreada:yparameter>
+					</floreada:display>
+					<floreada:gate id="Gate87" name="GFP+" pipelines="All Files">
+						<floreada:display>
+							<floreada:xparameter>
+								<floreada:parameter name="APC-A"/>
+								<floreada:parameter name="APC-A"/>
+								<floreada:parameter name="APC-A"/>
+								<floreada:parameter name="APC-A"/>
+							</floreada:xparameter>
+							<floreada:yparameter>
+								<floreada:parameter name="SSC-H"/>
+								<floreada:parameter name="SSC-H"/>
+								<floreada:parameter name="SSC-H"/>
+								<floreada:parameter name="SSC-H"/>
+							</floreada:yparameter>
+						</floreada:display>
+						<floreada:gate id="Gate131" name="CD69+" pipelines="All Files">
+							<floreada:display>
+								<floreada:xparameter>
+									<floreada:parameter name="APC-A"/>
+									<floreada:parameter name="APC-A"/>
+									<floreada:parameter name="APC-A"/>
+									<floreada:parameter name="APC-A"/>
+								</floreada:xparameter>
+								<floreada:yparameter>
+									<floreada:parameter name="SSC-H"/>
+									<floreada:parameter name="SSC-H"/>
+									<floreada:parameter name="SSC-H"/>
+									<floreada:parameter name="SSC-H"/>
+								</floreada:yparameter>
+							</floreada:display>
+						</floreada:gate>
+					</floreada:gate>
+				</floreada:gate>
+			</floreada:fcsfile>
+			<floreada:pipegroup name="All Files">
+				<floreada:pipeconditions>
+					<floreada:pipecondition operand="File Name" operation="contains" arg="" inverse="false"/>
+				</floreada:pipeconditions>
+				<floreada:colormap>
+					<floreada:colormapentry hash="15808326338703503240" color="#122C91"/>
+					<floreada:colormapentry hash="1162533965960408428" color="#00ff4a"/>
+					<floreada:colormapentry hash="6573837546088894612" color="#ff0000"/>
+					<floreada:colormapentry hash="13895103132830052907" color="#9500ff"/>
+					<floreada:colormapentry hash="14074825279989626995" color="#ffdf00"/>
+					<floreada:colormapentry hash="7149127467393868336" color="#00d4ff"/>
+					<floreada:colormapentry hash="546384012669884149" color="#ff5500"/>
+					<floreada:colormapentry hash="10980469024377262986" color="#00ff9f"/>
+					<floreada:colormapentry hash="1609046432577942998" color="#ea00ff"/>
+					<floreada:colormapentry hash="17659747287164720187" color="#caff00"/>
+					<floreada:colormapentry hash="360312022939019744" color="#007fff"/>
+					<floreada:colormapentry hash="2549909562301191607" color="#ffaa00"/>
+					<floreada:colormapentry hash="14784138383545134451" color="#00fff4"/>
+					<floreada:colormapentry hash="9086718565514941223" color="#ff00bf"/>
+					<floreada:colormapentry hash="4428983540255952181" color="#75ff00"/>
+					<floreada:colormapentry hash="7523228234944089253" color="#002aff"/>
+					<floreada:colormapentry hash="1089447450799508040" color="#ff8000"/>
+					<floreada:colormapentry hash="55692372338253158" color="#00ffca"/>
+					<floreada:colormapentry hash="14121611240197774488" color="#ff00ea"/>
+					<floreada:colormapentry hash="4678846369566068628" color="#9fff00"/>
+					<floreada:colormapentry hash="99056905577452144" color="#0055ff"/>
+				</floreada:colormap>
+				<floreada:parameters>
+				</floreada:parameters>
+				<floreada:pipegate id="Gate44" name="cells" >
+					<floreada:pipegate id="Gate66" name="GFP+" >
+						<floreada:pipegate id="Gate110" name="CD69+" >
+						</floreada:pipegate>
+					</floreada:pipegate>
+				</floreada:pipegate>
+			</floreada:pipegroup>
+		</floreada:workspace>
+	</data-type:custom-info>
+	<gating:EllipsoidGate gating:id="Gate45">
+		<gating:dimension gating:compensation-ref="uncompensated" gating:transformation-ref="linear_4194304_0">
+			<data-type:fcs-dimension data-type:name="FSC-H"/>
+		</gating:dimension>
+		<gating:dimension gating:compensation-ref="uncompensated" gating:transformation-ref="linear_4194304_0">
+			<data-type:fcs-dimension data-type:name="SSC-H"/>
+		</gating:dimension>
+		<gating:mean>
+			<gating:coordinate data-type:value="0.43096955128205133"/>
+			<gating:coordinate data-type:value="0.27106893647738206"/>
+		</gating:mean>
+		<gating:covarianceMatrix>
+			<gating:row>
+				<gating:entry data-type:value="0.10838226944460386"/>
+				<gating:entry data-type:value="0.024184533078080432"/>
+			</gating:row>
+			<gating:row>
+				<gating:entry data-type:value="0.024184533078080432"/>
+				<gating:entry data-type:value="0.05783791248878632"/>
+			</gating:row>
+		</gating:covarianceMatrix>
+		<gating:distanceSquare data-type:value="1"/>
+	</gating:EllipsoidGate>
+	<gating:RectangleGate gating:id="Gate67">
+		<gating:dimension gating:min="409484.09375" gating:max="3195796.75" gating:compensation-ref="uncompensated">
+			<data-type:fcs-dimension data-type:name="FSC-H"/>
+		</gating:dimension>
+		<gating:dimension gating:min="7302.146484375" gating:max="11051756" gating:compensation-ref="uncompensated">
+			<data-type:fcs-dimension data-type:name="GFP-A"/>
+		</gating:dimension>
+	</gating:RectangleGate>
+	<gating:PolygonGate gating:id="Gate111">
+		<gating:dimension gating:compensation-ref="uncompensated" gating:transformation-ref="logarithmic_10000000_8">
+			<data-type:fcs-dimension data-type:name="APC-A"/>
+		</gating:dimension>
+		<gating:dimension gating:compensation-ref="uncompensated" gating:transformation-ref="linear_4194304_0">
+			<data-type:fcs-dimension data-type:name="SSC-H"/>
+		</gating:dimension>
+		<gating:vertex>
+			<gating:coordinate data-type:value="0.5740606936416185"/>
+			<gating:coordinate data-type:value="0.029490495668912417"/>
+		</gating:vertex>
+		<gating:vertex>
+			<gating:coordinate data-type:value="0.7044396274887604"/>
+			<gating:coordinate data-type:value="0.5193846246390761"/>
+		</gating:vertex>
+		<gating:vertex>
+			<gating:coordinate data-type:value="0.9857498394348105"/>
+			<gating:coordinate data-type:value="0.5116849133782483"/>
+		</gating:vertex>
+		<gating:vertex>
+			<gating:coordinate data-type:value="0.987034360950546"/>
+			<gating:coordinate data-type:value="0.03622774302213667"/>
+		</gating:vertex>
+		<gating:vertex>
+			<gating:coordinate data-type:value="0.5753452151573539"/>
+			<gating:coordinate data-type:value="0.023715712223291628"/>
+		</gating:vertex>
+		<gating:vertex>
+			<gating:coordinate data-type:value="0.5740606936416185"/>
+			<gating:coordinate data-type:value="0.029490495668912417"/>
+		</gating:vertex>
+	</gating:PolygonGate>
+	<gating:EllipsoidGate gating:id="Gate46">
+		<gating:dimension gating:compensation-ref="uncompensated" gating:transformation-ref="linear_4194304_0">
+			<data-type:fcs-dimension data-type:name="FSC-H"/>
+		</gating:dimension>
+		<gating:dimension gating:compensation-ref="uncompensated" gating:transformation-ref="linear_4194304_0">
+			<data-type:fcs-dimension data-type:name="SSC-H"/>
+		</gating:dimension>
+		<gating:mean>
+			<gating:coordinate data-type:value="0.43096955128205133"/>
+			<gating:coordinate data-type:value="0.27106893647738206"/>
+		</gating:mean>
+		<gating:covarianceMatrix>
+			<gating:row>
+				<gating:entry data-type:value="0.10838226944460386"/>
+				<gating:entry data-type:value="0.024184533078080432"/>
+			</gating:row>
+			<gating:row>
+				<gating:entry data-type:value="0.024184533078080432"/>
+				<gating:entry data-type:value="0.05783791248878632"/>
+			</gating:row>
+		</gating:covarianceMatrix>
+		<gating:distanceSquare data-type:value="1"/>
+	</gating:EllipsoidGate>
+	<gating:RectangleGate gating:id="Gate68">
+		<gating:dimension gating:min="409484.09375" gating:max="3195796.75" gating:compensation-ref="uncompensated">
+			<data-type:fcs-dimension data-type:name="FSC-H"/>
+		</gating:dimension>
+		<gating:dimension gating:min="7302.146484375" gating:max="11051756" gating:compensation-ref="uncompensated">
+			<data-type:fcs-dimension data-type:name="GFP-A"/>
+		</gating:dimension>
+	</gating:RectangleGate>
+	<gating:PolygonGate gating:id="Gate112">
+		<gating:dimension gating:compensation-ref="uncompensated" gating:transformation-ref="logarithmic_10000000_8">
+			<data-type:fcs-dimension data-type:name="APC-A"/>
+		</gating:dimension>
+		<gating:dimension gating:compensation-ref="uncompensated" gating:transformation-ref="linear_4194304_0">
+			<data-type:fcs-dimension data-type:name="SSC-H"/>
+		</gating:dimension>
+		<gating:vertex>
+			<gating:coordinate data-type:value="0.5740606936416185"/>
+			<gating:coordinate data-type:value="0.029490495668912417"/>
+		</gating:vertex>
+		<gating:vertex>
+			<gating:coordinate data-type:value="0.7044396274887604"/>
+			<gating:coordinate data-type:value="0.5193846246390761"/>
+		</gating:vertex>
+		<gating:vertex>
+			<gating:coordinate data-type:value="0.9857498394348105"/>
+			<gating:coordinate data-type:value="0.5116849133782483"/>
+		</gating:vertex>
+		<gating:vertex>
+			<gating:coordinate data-type:value="0.987034360950546"/>
+			<gating:coordinate data-type:value="0.03622774302213667"/>
+		</gating:vertex>
+		<gating:vertex>
+			<gating:coordinate data-type:value="0.5753452151573539"/>
+			<gating:coordinate data-type:value="0.023715712223291628"/>
+		</gating:vertex>
+		<gating:vertex>
+			<gating:coordinate data-type:value="0.5740606936416185"/>
+			<gating:coordinate data-type:value="0.029490495668912417"/>
+		</gating:vertex>
+	</gating:PolygonGate>
+	<gating:EllipsoidGate gating:id="Gate47">
+		<gating:dimension gating:compensation-ref="uncompensated" gating:transformation-ref="linear_4194304_0">
+			<data-type:fcs-dimension data-type:name="FSC-H"/>
+		</gating:dimension>
+		<gating:dimension gating:compensation-ref="uncompensated" gating:transformation-ref="linear_4194304_0">
+			<data-type:fcs-dimension data-type:name="SSC-H"/>
+		</gating:dimension>
+		<gating:mean>
+			<gating:coordinate data-type:value="0.43096955128205133"/>
+			<gating:coordinate data-type:value="0.27106893647738206"/>
+		</gating:mean>
+		<gating:covarianceMatrix>
+			<gating:row>
+				<gating:entry data-type:value="0.10838226944460386"/>
+				<gating:entry data-type:value="0.024184533078080432"/>
+			</gating:row>
+			<gating:row>
+				<gating:entry data-type:value="0.024184533078080432"/>
+				<gating:entry data-type:value="0.05783791248878632"/>
+			</gating:row>
+		</gating:covarianceMatrix>
+		<gating:distanceSquare data-type:value="1"/>
+	</gating:EllipsoidGate>
+	<gating:RectangleGate gating:id="Gate69">
+		<gating:dimension gating:min="409484.09375" gating:max="3195796.75" gating:compensation-ref="uncompensated">
+			<data-type:fcs-dimension data-type:name="FSC-H"/>
+		</gating:dimension>
+		<gating:dimension gating:min="7302.146484375" gating:max="11051756" gating:compensation-ref="uncompensated">
+			<data-type:fcs-dimension data-type:name="GFP-A"/>
+		</gating:dimension>
+	</gating:RectangleGate>
+	<gating:PolygonGate gating:id="Gate113">
+		<gating:dimension gating:compensation-ref="uncompensated" gating:transformation-ref="logarithmic_10000000_8">
+			<data-type:fcs-dimension data-type:name="APC-A"/>
+		</gating:dimension>
+		<gating:dimension gating:compensation-ref="uncompensated" gating:transformation-ref="linear_4194304_0">
+			<data-type:fcs-dimension data-type:name="SSC-H"/>
+		</gating:dimension>
+		<gating:vertex>
+			<gating:coordinate data-type:value="0.5740606936416185"/>
+			<gating:coordinate data-type:value="0.029490495668912417"/>
+		</gating:vertex>
+		<gating:vertex>
+			<gating:coordinate data-type:value="0.7044396274887604"/>
+			<gating:coordinate data-type:value="0.5193846246390761"/>
+		</gating:vertex>
+		<gating:vertex>
+			<gating:coordinate data-type:value="0.9857498394348105"/>
+			<gating:coordinate data-type:value="0.5116849133782483"/>
+		</gating:vertex>
+		<gating:vertex>
+			<gating:coordinate data-type:value="0.987034360950546"/>
+			<gating:coordinate data-type:value="0.03622774302213667"/>
+		</gating:vertex>
+		<gating:vertex>
+			<gating:coordinate data-type:value="0.5753452151573539"/>
+			<gating:coordinate data-type:value="0.023715712223291628"/>
+		</gating:vertex>
+		<gating:vertex>
+			<gating:coordinate data-type:value="0.5740606936416185"/>
+			<gating:coordinate data-type:value="0.029490495668912417"/>
+		</gating:vertex>
+	</gating:PolygonGate>
+	<gating:EllipsoidGate gating:id="Gate48">
+		<gating:dimension gating:compensation-ref="uncompensated" gating:transformation-ref="linear_4194304_0">
+			<data-type:fcs-dimension data-type:name="FSC-H"/>
+		</gating:dimension>
+		<gating:dimension gating:compensation-ref="uncompensated" gating:transformation-ref="linear_4194304_0">
+			<data-type:fcs-dimension data-type:name="SSC-H"/>
+		</gating:dimension>
+		<gating:mean>
+			<gating:coordinate data-type:value="0.43096955128205133"/>
+			<gating:coordinate data-type:value="0.27106893647738206"/>
+		</gating:mean>
+		<gating:covarianceMatrix>
+			<gating:row>
+				<gating:entry data-type:value="0.10838226944460386"/>
+				<gating:entry data-type:value="0.024184533078080432"/>
+			</gating:row>
+			<gating:row>
+				<gating:entry data-type:value="0.024184533078080432"/>
+				<gating:entry data-type:value="0.05783791248878632"/>
+			</gating:row>
+		</gating:covarianceMatrix>
+		<gating:distanceSquare data-type:value="1"/>
+	</gating:EllipsoidGate>
+	<gating:RectangleGate gating:id="Gate70">
+		<gating:dimension gating:min="409484.09375" gating:max="3195796.75" gating:compensation-ref="uncompensated">
+			<data-type:fcs-dimension data-type:name="FSC-H"/>
+		</gating:dimension>
+		<gating:dimension gating:min="7302.146484375" gating:max="11051756" gating:compensation-ref="uncompensated">
+			<data-type:fcs-dimension data-type:name="GFP-A"/>
+		</gating:dimension>
+	</gating:RectangleGate>
+	<gating:PolygonGate gating:id="Gate114">
+		<gating:dimension gating:compensation-ref="uncompensated" gating:transformation-ref="logarithmic_10000000_8">
+			<data-type:fcs-dimension data-type:name="APC-A"/>
+		</gating:dimension>
+		<gating:dimension gating:compensation-ref="uncompensated" gating:transformation-ref="linear_4194304_0">
+			<data-type:fcs-dimension data-type:name="SSC-H"/>
+		</gating:dimension>
+		<gating:vertex>
+			<gating:coordinate data-type:value="0.5740606936416185"/>
+			<gating:coordinate data-type:value="0.029490495668912417"/>
+		</gating:vertex>
+		<gating:vertex>
+			<gating:coordinate data-type:value="0.7044396274887604"/>
+			<gating:coordinate data-type:value="0.5193846246390761"/>
+		</gating:vertex>
+		<gating:vertex>
+			<gating:coordinate data-type:value="0.9857498394348105"/>
+			<gating:coordinate data-type:value="0.5116849133782483"/>
+		</gating:vertex>
+		<gating:vertex>
+			<gating:coordinate data-type:value="0.987034360950546"/>
+			<gating:coordinate data-type:value="0.03622774302213667"/>
+		</gating:vertex>
+		<gating:vertex>
+			<gating:coordinate data-type:value="0.5753452151573539"/>
+			<gating:coordinate data-type:value="0.023715712223291628"/>
+		</gating:vertex>
+		<gating:vertex>
+			<gating:coordinate data-type:value="0.5740606936416185"/>
+			<gating:coordinate data-type:value="0.029490495668912417"/>
+		</gating:vertex>
+	</gating:PolygonGate>
+	<gating:EllipsoidGate gating:id="Gate49">
+		<gating:dimension gating:compensation-ref="uncompensated" gating:transformation-ref="linear_4194304_0">
+			<data-type:fcs-dimension data-type:name="FSC-H"/>
+		</gating:dimension>
+		<gating:dimension gating:compensation-ref="uncompensated" gating:transformation-ref="linear_4194304_0">
+			<data-type:fcs-dimension data-type:name="SSC-H"/>
+		</gating:dimension>
+		<gating:mean>
+			<gating:coordinate data-type:value="0.43096955128205133"/>
+			<gating:coordinate data-type:value="0.27106893647738206"/>
+		</gating:mean>
+		<gating:covarianceMatrix>
+			<gating:row>
+				<gating:entry data-type:value="0.10838226944460386"/>
+				<gating:entry data-type:value="0.024184533078080432"/>
+			</gating:row>
+			<gating:row>
+				<gating:entry data-type:value="0.024184533078080432"/>
+				<gating:entry data-type:value="0.05783791248878632"/>
+			</gating:row>
+		</gating:covarianceMatrix>
+		<gating:distanceSquare data-type:value="1"/>
+	</gating:EllipsoidGate>
+	<gating:RectangleGate gating:id="Gate71">
+		<gating:dimension gating:min="409484.09375" gating:max="3195796.75" gating:compensation-ref="uncompensated">
+			<data-type:fcs-dimension data-type:name="FSC-H"/>
+		</gating:dimension>
+		<gating:dimension gating:min="7302.146484375" gating:max="11051756" gating:compensation-ref="uncompensated">
+			<data-type:fcs-dimension data-type:name="GFP-A"/>
+		</gating:dimension>
+	</gating:RectangleGate>
+	<gating:PolygonGate gating:id="Gate115">
+		<gating:dimension gating:compensation-ref="uncompensated" gating:transformation-ref="logarithmic_10000000_8">
+			<data-type:fcs-dimension data-type:name="APC-A"/>
+		</gating:dimension>
+		<gating:dimension gating:compensation-ref="uncompensated" gating:transformation-ref="linear_4194304_0">
+			<data-type:fcs-dimension data-type:name="SSC-H"/>
+		</gating:dimension>
+		<gating:vertex>
+			<gating:coordinate data-type:value="0.5740606936416185"/>
+			<gating:coordinate data-type:value="0.029490495668912417"/>
+		</gating:vertex>
+		<gating:vertex>
+			<gating:coordinate data-type:value="0.7044396274887604"/>
+			<gating:coordinate data-type:value="0.5193846246390761"/>
+		</gating:vertex>
+		<gating:vertex>
+			<gating:coordinate data-type:value="0.9857498394348105"/>
+			<gating:coordinate data-type:value="0.5116849133782483"/>
+		</gating:vertex>
+		<gating:vertex>
+			<gating:coordinate data-type:value="0.987034360950546"/>
+			<gating:coordinate data-type:value="0.03622774302213667"/>
+		</gating:vertex>
+		<gating:vertex>
+			<gating:coordinate data-type:value="0.5753452151573539"/>
+			<gating:coordinate data-type:value="0.023715712223291628"/>
+		</gating:vertex>
+		<gating:vertex>
+			<gating:coordinate data-type:value="0.5740606936416185"/>
+			<gating:coordinate data-type:value="0.029490495668912417"/>
+		</gating:vertex>
+	</gating:PolygonGate>
+	<gating:EllipsoidGate gating:id="Gate50">
+		<gating:dimension gating:compensation-ref="uncompensated" gating:transformation-ref="linear_4194304_0">
+			<data-type:fcs-dimension data-type:name="FSC-H"/>
+		</gating:dimension>
+		<gating:dimension gating:compensation-ref="uncompensated" gating:transformation-ref="linear_4194304_0">
+			<data-type:fcs-dimension data-type:name="SSC-H"/>
+		</gating:dimension>
+		<gating:mean>
+			<gating:coordinate data-type:value="0.43096955128205133"/>
+			<gating:coordinate data-type:value="0.27106893647738206"/>
+		</gating:mean>
+		<gating:covarianceMatrix>
+			<gating:row>
+				<gating:entry data-type:value="0.10838226944460386"/>
+				<gating:entry data-type:value="0.024184533078080432"/>
+			</gating:row>
+			<gating:row>
+				<gating:entry data-type:value="0.024184533078080432"/>
+				<gating:entry data-type:value="0.05783791248878632"/>
+			</gating:row>
+		</gating:covarianceMatrix>
+		<gating:distanceSquare data-type:value="1"/>
+	</gating:EllipsoidGate>
+	<gating:RectangleGate gating:id="Gate72">
+		<gating:dimension gating:min="409484.09375" gating:max="3195796.75" gating:compensation-ref="uncompensated">
+			<data-type:fcs-dimension data-type:name="FSC-H"/>
+		</gating:dimension>
+		<gating:dimension gating:min="7302.146484375" gating:max="11051756" gating:compensation-ref="uncompensated">
+			<data-type:fcs-dimension data-type:name="GFP-A"/>
+		</gating:dimension>
+	</gating:RectangleGate>
+	<gating:PolygonGate gating:id="Gate116">
+		<gating:dimension gating:compensation-ref="uncompensated" gating:transformation-ref="logarithmic_10000000_8">
+			<data-type:fcs-dimension data-type:name="APC-A"/>
+		</gating:dimension>
+		<gating:dimension gating:compensation-ref="uncompensated" gating:transformation-ref="linear_4194304_0">
+			<data-type:fcs-dimension data-type:name="SSC-H"/>
+		</gating:dimension>
+		<gating:vertex>
+			<gating:coordinate data-type:value="0.5740606936416185"/>
+			<gating:coordinate data-type:value="0.029490495668912417"/>
+		</gating:vertex>
+		<gating:vertex>
+			<gating:coordinate data-type:value="0.7044396274887604"/>
+			<gating:coordinate data-type:value="0.5193846246390761"/>
+		</gating:vertex>
+		<gating:vertex>
+			<gating:coordinate data-type:value="0.9857498394348105"/>
+			<gating:coordinate data-type:value="0.5116849133782483"/>
+		</gating:vertex>
+		<gating:vertex>
+			<gating:coordinate data-type:value="0.987034360950546"/>
+			<gating:coordinate data-type:value="0.03622774302213667"/>
+		</gating:vertex>
+		<gating:vertex>
+			<gating:coordinate data-type:value="0.5753452151573539"/>
+			<gating:coordinate data-type:value="0.023715712223291628"/>
+		</gating:vertex>
+		<gating:vertex>
+			<gating:coordinate data-type:value="0.5740606936416185"/>
+			<gating:coordinate data-type:value="0.029490495668912417"/>
+		</gating:vertex>
+	</gating:PolygonGate>
+	<gating:EllipsoidGate gating:id="Gate51">
+		<gating:dimension gating:compensation-ref="uncompensated" gating:transformation-ref="linear_4194304_0">
+			<data-type:fcs-dimension data-type:name="FSC-H"/>
+		</gating:dimension>
+		<gating:dimension gating:compensation-ref="uncompensated" gating:transformation-ref="linear_4194304_0">
+			<data-type:fcs-dimension data-type:name="SSC-H"/>
+		</gating:dimension>
+		<gating:mean>
+			<gating:coordinate data-type:value="0.43096955128205133"/>
+			<gating:coordinate data-type:value="0.27106893647738206"/>
+		</gating:mean>
+		<gating:covarianceMatrix>
+			<gating:row>
+				<gating:entry data-type:value="0.10838226944460386"/>
+				<gating:entry data-type:value="0.024184533078080432"/>
+			</gating:row>
+			<gating:row>
+				<gating:entry data-type:value="0.024184533078080432"/>
+				<gating:entry data-type:value="0.05783791248878632"/>
+			</gating:row>
+		</gating:covarianceMatrix>
+		<gating:distanceSquare data-type:value="1"/>
+	</gating:EllipsoidGate>
+	<gating:RectangleGate gating:id="Gate73">
+		<gating:dimension gating:min="409484.09375" gating:max="3195796.75" gating:compensation-ref="uncompensated">
+			<data-type:fcs-dimension data-type:name="FSC-H"/>
+		</gating:dimension>
+		<gating:dimension gating:min="7302.146484375" gating:max="11051756" gating:compensation-ref="uncompensated">
+			<data-type:fcs-dimension data-type:name="GFP-A"/>
+		</gating:dimension>
+	</gating:RectangleGate>
+	<gating:PolygonGate gating:id="Gate117">
+		<gating:dimension gating:compensation-ref="uncompensated" gating:transformation-ref="logarithmic_10000000_8">
+			<data-type:fcs-dimension data-type:name="APC-A"/>
+		</gating:dimension>
+		<gating:dimension gating:compensation-ref="uncompensated" gating:transformation-ref="linear_4194304_0">
+			<data-type:fcs-dimension data-type:name="SSC-H"/>
+		</gating:dimension>
+		<gating:vertex>
+			<gating:coordinate data-type:value="0.5740606936416185"/>
+			<gating:coordinate data-type:value="0.029490495668912417"/>
+		</gating:vertex>
+		<gating:vertex>
+			<gating:coordinate data-type:value="0.7044396274887604"/>
+			<gating:coordinate data-type:value="0.5193846246390761"/>
+		</gating:vertex>
+		<gating:vertex>
+			<gating:coordinate data-type:value="0.9857498394348105"/>
+			<gating:coordinate data-type:value="0.5116849133782483"/>
+		</gating:vertex>
+		<gating:vertex>
+			<gating:coordinate data-type:value="0.987034360950546"/>
+			<gating:coordinate data-type:value="0.03622774302213667"/>
+		</gating:vertex>
+		<gating:vertex>
+			<gating:coordinate data-type:value="0.5753452151573539"/>
+			<gating:coordinate data-type:value="0.023715712223291628"/>
+		</gating:vertex>
+		<gating:vertex>
+			<gating:coordinate data-type:value="0.5740606936416185"/>
+			<gating:coordinate data-type:value="0.029490495668912417"/>
+		</gating:vertex>
+	</gating:PolygonGate>
+	<gating:EllipsoidGate gating:id="Gate52">
+		<gating:dimension gating:compensation-ref="uncompensated" gating:transformation-ref="linear_4194304_0">
+			<data-type:fcs-dimension data-type:name="FSC-H"/>
+		</gating:dimension>
+		<gating:dimension gating:compensation-ref="uncompensated" gating:transformation-ref="linear_4194304_0">
+			<data-type:fcs-dimension data-type:name="SSC-H"/>
+		</gating:dimension>
+		<gating:mean>
+			<gating:coordinate data-type:value="0.43096955128205133"/>
+			<gating:coordinate data-type:value="0.27106893647738206"/>
+		</gating:mean>
+		<gating:covarianceMatrix>
+			<gating:row>
+				<gating:entry data-type:value="0.10838226944460386"/>
+				<gating:entry data-type:value="0.024184533078080432"/>
+			</gating:row>
+			<gating:row>
+				<gating:entry data-type:value="0.024184533078080432"/>
+				<gating:entry data-type:value="0.05783791248878632"/>
+			</gating:row>
+		</gating:covarianceMatrix>
+		<gating:distanceSquare data-type:value="1"/>
+	</gating:EllipsoidGate>
+	<gating:RectangleGate gating:id="Gate74">
+		<gating:dimension gating:min="409484.09375" gating:max="3195796.75" gating:compensation-ref="uncompensated">
+			<data-type:fcs-dimension data-type:name="FSC-H"/>
+		</gating:dimension>
+		<gating:dimension gating:min="7302.146484375" gating:max="11051756" gating:compensation-ref="uncompensated">
+			<data-type:fcs-dimension data-type:name="GFP-A"/>
+		</gating:dimension>
+	</gating:RectangleGate>
+	<gating:PolygonGate gating:id="Gate118">
+		<gating:dimension gating:compensation-ref="uncompensated" gating:transformation-ref="logarithmic_10000000_8">
+			<data-type:fcs-dimension data-type:name="APC-A"/>
+		</gating:dimension>
+		<gating:dimension gating:compensation-ref="uncompensated" gating:transformation-ref="linear_4194304_0">
+			<data-type:fcs-dimension data-type:name="SSC-H"/>
+		</gating:dimension>
+		<gating:vertex>
+			<gating:coordinate data-type:value="0.5740606936416185"/>
+			<gating:coordinate data-type:value="0.029490495668912417"/>
+		</gating:vertex>
+		<gating:vertex>
+			<gating:coordinate data-type:value="0.7044396274887604"/>
+			<gating:coordinate data-type:value="0.5193846246390761"/>
+		</gating:vertex>
+		<gating:vertex>
+			<gating:coordinate data-type:value="0.9857498394348105"/>
+			<gating:coordinate data-type:value="0.5116849133782483"/>
+		</gating:vertex>
+		<gating:vertex>
+			<gating:coordinate data-type:value="0.987034360950546"/>
+			<gating:coordinate data-type:value="0.03622774302213667"/>
+		</gating:vertex>
+		<gating:vertex>
+			<gating:coordinate data-type:value="0.5753452151573539"/>
+			<gating:coordinate data-type:value="0.023715712223291628"/>
+		</gating:vertex>
+		<gating:vertex>
+			<gating:coordinate data-type:value="0.5740606936416185"/>
+			<gating:coordinate data-type:value="0.029490495668912417"/>
+		</gating:vertex>
+	</gating:PolygonGate>
+	<gating:EllipsoidGate gating:id="Gate53">
+		<gating:dimension gating:compensation-ref="uncompensated" gating:transformation-ref="linear_4194304_0">
+			<data-type:fcs-dimension data-type:name="FSC-H"/>
+		</gating:dimension>
+		<gating:dimension gating:compensation-ref="uncompensated" gating:transformation-ref="linear_4194304_0">
+			<data-type:fcs-dimension data-type:name="SSC-H"/>
+		</gating:dimension>
+		<gating:mean>
+			<gating:coordinate data-type:value="0.43096955128205133"/>
+			<gating:coordinate data-type:value="0.27106893647738206"/>
+		</gating:mean>
+		<gating:covarianceMatrix>
+			<gating:row>
+				<gating:entry data-type:value="0.10838226944460386"/>
+				<gating:entry data-type:value="0.024184533078080432"/>
+			</gating:row>
+			<gating:row>
+				<gating:entry data-type:value="0.024184533078080432"/>
+				<gating:entry data-type:value="0.05783791248878632"/>
+			</gating:row>
+		</gating:covarianceMatrix>
+		<gating:distanceSquare data-type:value="1"/>
+	</gating:EllipsoidGate>
+	<gating:RectangleGate gating:id="Gate75">
+		<gating:dimension gating:min="409484.09375" gating:max="3195796.75" gating:compensation-ref="uncompensated">
+			<data-type:fcs-dimension data-type:name="FSC-H"/>
+		</gating:dimension>
+		<gating:dimension gating:min="7302.146484375" gating:max="11051756" gating:compensation-ref="uncompensated">
+			<data-type:fcs-dimension data-type:name="GFP-A"/>
+		</gating:dimension>
+	</gating:RectangleGate>
+	<gating:PolygonGate gating:id="Gate119">
+		<gating:dimension gating:compensation-ref="uncompensated" gating:transformation-ref="logarithmic_10000000_8">
+			<data-type:fcs-dimension data-type:name="APC-A"/>
+		</gating:dimension>
+		<gating:dimension gating:compensation-ref="uncompensated" gating:transformation-ref="linear_4194304_0">
+			<data-type:fcs-dimension data-type:name="SSC-H"/>
+		</gating:dimension>
+		<gating:vertex>
+			<gating:coordinate data-type:value="0.5740606936416185"/>
+			<gating:coordinate data-type:value="0.029490495668912417"/>
+		</gating:vertex>
+		<gating:vertex>
+			<gating:coordinate data-type:value="0.7044396274887604"/>
+			<gating:coordinate data-type:value="0.5193846246390761"/>
+		</gating:vertex>
+		<gating:vertex>
+			<gating:coordinate data-type:value="0.9857498394348105"/>
+			<gating:coordinate data-type:value="0.5116849133782483"/>
+		</gating:vertex>
+		<gating:vertex>
+			<gating:coordinate data-type:value="0.987034360950546"/>
+			<gating:coordinate data-type:value="0.03622774302213667"/>
+		</gating:vertex>
+		<gating:vertex>
+			<gating:coordinate data-type:value="0.5753452151573539"/>
+			<gating:coordinate data-type:value="0.023715712223291628"/>
+		</gating:vertex>
+		<gating:vertex>
+			<gating:coordinate data-type:value="0.5740606936416185"/>
+			<gating:coordinate data-type:value="0.029490495668912417"/>
+		</gating:vertex>
+	</gating:PolygonGate>
+	<gating:EllipsoidGate gating:id="Gate54">
+		<gating:dimension gating:compensation-ref="uncompensated" gating:transformation-ref="linear_4194304_0">
+			<data-type:fcs-dimension data-type:name="FSC-H"/>
+		</gating:dimension>
+		<gating:dimension gating:compensation-ref="uncompensated" gating:transformation-ref="linear_4194304_0">
+			<data-type:fcs-dimension data-type:name="SSC-H"/>
+		</gating:dimension>
+		<gating:mean>
+			<gating:coordinate data-type:value="0.43096955128205133"/>
+			<gating:coordinate data-type:value="0.27106893647738206"/>
+		</gating:mean>
+		<gating:covarianceMatrix>
+			<gating:row>
+				<gating:entry data-type:value="0.10838226944460386"/>
+				<gating:entry data-type:value="0.024184533078080432"/>
+			</gating:row>
+			<gating:row>
+				<gating:entry data-type:value="0.024184533078080432"/>
+				<gating:entry data-type:value="0.05783791248878632"/>
+			</gating:row>
+		</gating:covarianceMatrix>
+		<gating:distanceSquare data-type:value="1"/>
+	</gating:EllipsoidGate>
+	<gating:RectangleGate gating:id="Gate76">
+		<gating:dimension gating:min="409484.09375" gating:max="3195796.75" gating:compensation-ref="uncompensated">
+			<data-type:fcs-dimension data-type:name="FSC-H"/>
+		</gating:dimension>
+		<gating:dimension gating:min="7302.146484375" gating:max="11051756" gating:compensation-ref="uncompensated">
+			<data-type:fcs-dimension data-type:name="GFP-A"/>
+		</gating:dimension>
+	</gating:RectangleGate>
+	<gating:PolygonGate gating:id="Gate120">
+		<gating:dimension gating:compensation-ref="uncompensated" gating:transformation-ref="logarithmic_10000000_8">
+			<data-type:fcs-dimension data-type:name="APC-A"/>
+		</gating:dimension>
+		<gating:dimension gating:compensation-ref="uncompensated" gating:transformation-ref="linear_4194304_0">
+			<data-type:fcs-dimension data-type:name="SSC-H"/>
+		</gating:dimension>
+		<gating:vertex>
+			<gating:coordinate data-type:value="0.5740606936416185"/>
+			<gating:coordinate data-type:value="0.029490495668912417"/>
+		</gating:vertex>
+		<gating:vertex>
+			<gating:coordinate data-type:value="0.7044396274887604"/>
+			<gating:coordinate data-type:value="0.5193846246390761"/>
+		</gating:vertex>
+		<gating:vertex>
+			<gating:coordinate data-type:value="0.9857498394348105"/>
+			<gating:coordinate data-type:value="0.5116849133782483"/>
+		</gating:vertex>
+		<gating:vertex>
+			<gating:coordinate data-type:value="0.987034360950546"/>
+			<gating:coordinate data-type:value="0.03622774302213667"/>
+		</gating:vertex>
+		<gating:vertex>
+			<gating:coordinate data-type:value="0.5753452151573539"/>
+			<gating:coordinate data-type:value="0.023715712223291628"/>
+		</gating:vertex>
+		<gating:vertex>
+			<gating:coordinate data-type:value="0.5740606936416185"/>
+			<gating:coordinate data-type:value="0.029490495668912417"/>
+		</gating:vertex>
+	</gating:PolygonGate>
+	<gating:EllipsoidGate gating:id="Gate55">
+		<gating:dimension gating:compensation-ref="uncompensated" gating:transformation-ref="linear_4194304_0">
+			<data-type:fcs-dimension data-type:name="FSC-H"/>
+		</gating:dimension>
+		<gating:dimension gating:compensation-ref="uncompensated" gating:transformation-ref="linear_4194304_0">
+			<data-type:fcs-dimension data-type:name="SSC-H"/>
+		</gating:dimension>
+		<gating:mean>
+			<gating:coordinate data-type:value="0.43096955128205133"/>
+			<gating:coordinate data-type:value="0.27106893647738206"/>
+		</gating:mean>
+		<gating:covarianceMatrix>
+			<gating:row>
+				<gating:entry data-type:value="0.10838226944460386"/>
+				<gating:entry data-type:value="0.024184533078080432"/>
+			</gating:row>
+			<gating:row>
+				<gating:entry data-type:value="0.024184533078080432"/>
+				<gating:entry data-type:value="0.05783791248878632"/>
+			</gating:row>
+		</gating:covarianceMatrix>
+		<gating:distanceSquare data-type:value="1"/>
+	</gating:EllipsoidGate>
+	<gating:RectangleGate gating:id="Gate77">
+		<gating:dimension gating:min="409484.09375" gating:max="3195796.75" gating:compensation-ref="uncompensated">
+			<data-type:fcs-dimension data-type:name="FSC-H"/>
+		</gating:dimension>
+		<gating:dimension gating:min="7302.146484375" gating:max="11051756" gating:compensation-ref="uncompensated">
+			<data-type:fcs-dimension data-type:name="GFP-A"/>
+		</gating:dimension>
+	</gating:RectangleGate>
+	<gating:PolygonGate gating:id="Gate121">
+		<gating:dimension gating:compensation-ref="uncompensated" gating:transformation-ref="logarithmic_10000000_8">
+			<data-type:fcs-dimension data-type:name="APC-A"/>
+		</gating:dimension>
+		<gating:dimension gating:compensation-ref="uncompensated" gating:transformation-ref="linear_4194304_0">
+			<data-type:fcs-dimension data-type:name="SSC-H"/>
+		</gating:dimension>
+		<gating:vertex>
+			<gating:coordinate data-type:value="0.5740606936416185"/>
+			<gating:coordinate data-type:value="0.029490495668912417"/>
+		</gating:vertex>
+		<gating:vertex>
+			<gating:coordinate data-type:value="0.7044396274887604"/>
+			<gating:coordinate data-type:value="0.5193846246390761"/>
+		</gating:vertex>
+		<gating:vertex>
+			<gating:coordinate data-type:value="0.9857498394348105"/>
+			<gating:coordinate data-type:value="0.5116849133782483"/>
+		</gating:vertex>
+		<gating:vertex>
+			<gating:coordinate data-type:value="0.987034360950546"/>
+			<gating:coordinate data-type:value="0.03622774302213667"/>
+		</gating:vertex>
+		<gating:vertex>
+			<gating:coordinate data-type:value="0.5753452151573539"/>
+			<gating:coordinate data-type:value="0.023715712223291628"/>
+		</gating:vertex>
+		<gating:vertex>
+			<gating:coordinate data-type:value="0.5740606936416185"/>
+			<gating:coordinate data-type:value="0.029490495668912417"/>
+		</gating:vertex>
+	</gating:PolygonGate>
+	<gating:EllipsoidGate gating:id="Gate56">
+		<gating:dimension gating:compensation-ref="uncompensated" gating:transformation-ref="linear_4194304_0">
+			<data-type:fcs-dimension data-type:name="FSC-H"/>
+		</gating:dimension>
+		<gating:dimension gating:compensation-ref="uncompensated" gating:transformation-ref="linear_4194304_0">
+			<data-type:fcs-dimension data-type:name="SSC-H"/>
+		</gating:dimension>
+		<gating:mean>
+			<gating:coordinate data-type:value="0.43096955128205133"/>
+			<gating:coordinate data-type:value="0.27106893647738206"/>
+		</gating:mean>
+		<gating:covarianceMatrix>
+			<gating:row>
+				<gating:entry data-type:value="0.10838226944460386"/>
+				<gating:entry data-type:value="0.024184533078080432"/>
+			</gating:row>
+			<gating:row>
+				<gating:entry data-type:value="0.024184533078080432"/>
+				<gating:entry data-type:value="0.05783791248878632"/>
+			</gating:row>
+		</gating:covarianceMatrix>
+		<gating:distanceSquare data-type:value="1"/>
+	</gating:EllipsoidGate>
+	<gating:RectangleGate gating:id="Gate78">
+		<gating:dimension gating:min="409484.09375" gating:max="3195796.75" gating:compensation-ref="uncompensated">
+			<data-type:fcs-dimension data-type:name="FSC-H"/>
+		</gating:dimension>
+		<gating:dimension gating:min="7302.146484375" gating:max="11051756" gating:compensation-ref="uncompensated">
+			<data-type:fcs-dimension data-type:name="GFP-A"/>
+		</gating:dimension>
+	</gating:RectangleGate>
+	<gating:PolygonGate gating:id="Gate122">
+		<gating:dimension gating:compensation-ref="uncompensated" gating:transformation-ref="logarithmic_10000000_8">
+			<data-type:fcs-dimension data-type:name="APC-A"/>
+		</gating:dimension>
+		<gating:dimension gating:compensation-ref="uncompensated" gating:transformation-ref="linear_4194304_0">
+			<data-type:fcs-dimension data-type:name="SSC-H"/>
+		</gating:dimension>
+		<gating:vertex>
+			<gating:coordinate data-type:value="0.5740606936416185"/>
+			<gating:coordinate data-type:value="0.029490495668912417"/>
+		</gating:vertex>
+		<gating:vertex>
+			<gating:coordinate data-type:value="0.7044396274887604"/>
+			<gating:coordinate data-type:value="0.5193846246390761"/>
+		</gating:vertex>
+		<gating:vertex>
+			<gating:coordinate data-type:value="0.9857498394348105"/>
+			<gating:coordinate data-type:value="0.5116849133782483"/>
+		</gating:vertex>
+		<gating:vertex>
+			<gating:coordinate data-type:value="0.987034360950546"/>
+			<gating:coordinate data-type:value="0.03622774302213667"/>
+		</gating:vertex>
+		<gating:vertex>
+			<gating:coordinate data-type:value="0.5753452151573539"/>
+			<gating:coordinate data-type:value="0.023715712223291628"/>
+		</gating:vertex>
+		<gating:vertex>
+			<gating:coordinate data-type:value="0.5740606936416185"/>
+			<gating:coordinate data-type:value="0.029490495668912417"/>
+		</gating:vertex>
+	</gating:PolygonGate>
+	<gating:EllipsoidGate gating:id="Gate57">
+		<gating:dimension gating:compensation-ref="uncompensated" gating:transformation-ref="linear_4194304_0">
+			<data-type:fcs-dimension data-type:name="FSC-H"/>
+		</gating:dimension>
+		<gating:dimension gating:compensation-ref="uncompensated" gating:transformation-ref="linear_4194304_0">
+			<data-type:fcs-dimension data-type:name="SSC-H"/>
+		</gating:dimension>
+		<gating:mean>
+			<gating:coordinate data-type:value="0.43096955128205133"/>
+			<gating:coordinate data-type:value="0.27106893647738206"/>
+		</gating:mean>
+		<gating:covarianceMatrix>
+			<gating:row>
+				<gating:entry data-type:value="0.10838226944460386"/>
+				<gating:entry data-type:value="0.024184533078080432"/>
+			</gating:row>
+			<gating:row>
+				<gating:entry data-type:value="0.024184533078080432"/>
+				<gating:entry data-type:value="0.05783791248878632"/>
+			</gating:row>
+		</gating:covarianceMatrix>
+		<gating:distanceSquare data-type:value="1"/>
+	</gating:EllipsoidGate>
+	<gating:RectangleGate gating:id="Gate79">
+		<gating:dimension gating:min="409484.09375" gating:max="3195796.75" gating:compensation-ref="uncompensated">
+			<data-type:fcs-dimension data-type:name="FSC-H"/>
+		</gating:dimension>
+		<gating:dimension gating:min="7302.146484375" gating:max="11051756" gating:compensation-ref="uncompensated">
+			<data-type:fcs-dimension data-type:name="GFP-A"/>
+		</gating:dimension>
+	</gating:RectangleGate>
+	<gating:PolygonGate gating:id="Gate123">
+		<gating:dimension gating:compensation-ref="uncompensated" gating:transformation-ref="logarithmic_10000000_8">
+			<data-type:fcs-dimension data-type:name="APC-A"/>
+		</gating:dimension>
+		<gating:dimension gating:compensation-ref="uncompensated" gating:transformation-ref="linear_4194304_0">
+			<data-type:fcs-dimension data-type:name="SSC-H"/>
+		</gating:dimension>
+		<gating:vertex>
+			<gating:coordinate data-type:value="0.5740606936416185"/>
+			<gating:coordinate data-type:value="0.029490495668912417"/>
+		</gating:vertex>
+		<gating:vertex>
+			<gating:coordinate data-type:value="0.7044396274887604"/>
+			<gating:coordinate data-type:value="0.5193846246390761"/>
+		</gating:vertex>
+		<gating:vertex>
+			<gating:coordinate data-type:value="0.9857498394348105"/>
+			<gating:coordinate data-type:value="0.5116849133782483"/>
+		</gating:vertex>
+		<gating:vertex>
+			<gating:coordinate data-type:value="0.987034360950546"/>
+			<gating:coordinate data-type:value="0.03622774302213667"/>
+		</gating:vertex>
+		<gating:vertex>
+			<gating:coordinate data-type:value="0.5753452151573539"/>
+			<gating:coordinate data-type:value="0.023715712223291628"/>
+		</gating:vertex>
+		<gating:vertex>
+			<gating:coordinate data-type:value="0.5740606936416185"/>
+			<gating:coordinate data-type:value="0.029490495668912417"/>
+		</gating:vertex>
+	</gating:PolygonGate>
+	<gating:EllipsoidGate gating:id="Gate58">
+		<gating:dimension gating:compensation-ref="uncompensated" gating:transformation-ref="linear_4194304_0">
+			<data-type:fcs-dimension data-type:name="FSC-H"/>
+		</gating:dimension>
+		<gating:dimension gating:compensation-ref="uncompensated" gating:transformation-ref="linear_4194304_0">
+			<data-type:fcs-dimension data-type:name="SSC-H"/>
+		</gating:dimension>
+		<gating:mean>
+			<gating:coordinate data-type:value="0.43096955128205133"/>
+			<gating:coordinate data-type:value="0.27106893647738206"/>
+		</gating:mean>
+		<gating:covarianceMatrix>
+			<gating:row>
+				<gating:entry data-type:value="0.10838226944460386"/>
+				<gating:entry data-type:value="0.024184533078080432"/>
+			</gating:row>
+			<gating:row>
+				<gating:entry data-type:value="0.024184533078080432"/>
+				<gating:entry data-type:value="0.05783791248878632"/>
+			</gating:row>
+		</gating:covarianceMatrix>
+		<gating:distanceSquare data-type:value="1"/>
+	</gating:EllipsoidGate>
+	<gating:RectangleGate gating:id="Gate80">
+		<gating:dimension gating:min="409484.09375" gating:max="3195796.75" gating:compensation-ref="uncompensated">
+			<data-type:fcs-dimension data-type:name="FSC-H"/>
+		</gating:dimension>
+		<gating:dimension gating:min="7302.146484375" gating:max="11051756" gating:compensation-ref="uncompensated">
+			<data-type:fcs-dimension data-type:name="GFP-A"/>
+		</gating:dimension>
+	</gating:RectangleGate>
+	<gating:PolygonGate gating:id="Gate124">
+		<gating:dimension gating:compensation-ref="uncompensated" gating:transformation-ref="logarithmic_10000000_8">
+			<data-type:fcs-dimension data-type:name="APC-A"/>
+		</gating:dimension>
+		<gating:dimension gating:compensation-ref="uncompensated" gating:transformation-ref="linear_4194304_0">
+			<data-type:fcs-dimension data-type:name="SSC-H"/>
+		</gating:dimension>
+		<gating:vertex>
+			<gating:coordinate data-type:value="0.5740606936416185"/>
+			<gating:coordinate data-type:value="0.029490495668912417"/>
+		</gating:vertex>
+		<gating:vertex>
+			<gating:coordinate data-type:value="0.7044396274887604"/>
+			<gating:coordinate data-type:value="0.5193846246390761"/>
+		</gating:vertex>
+		<gating:vertex>
+			<gating:coordinate data-type:value="0.9857498394348105"/>
+			<gating:coordinate data-type:value="0.5116849133782483"/>
+		</gating:vertex>
+		<gating:vertex>
+			<gating:coordinate data-type:value="0.987034360950546"/>
+			<gating:coordinate data-type:value="0.03622774302213667"/>
+		</gating:vertex>
+		<gating:vertex>
+			<gating:coordinate data-type:value="0.5753452151573539"/>
+			<gating:coordinate data-type:value="0.023715712223291628"/>
+		</gating:vertex>
+		<gating:vertex>
+			<gating:coordinate data-type:value="0.5740606936416185"/>
+			<gating:coordinate data-type:value="0.029490495668912417"/>
+		</gating:vertex>
+	</gating:PolygonGate>
+	<gating:EllipsoidGate gating:id="Gate59">
+		<gating:dimension gating:compensation-ref="uncompensated" gating:transformation-ref="linear_4194304_0">
+			<data-type:fcs-dimension data-type:name="FSC-H"/>
+		</gating:dimension>
+		<gating:dimension gating:compensation-ref="uncompensated" gating:transformation-ref="linear_4194304_0">
+			<data-type:fcs-dimension data-type:name="SSC-H"/>
+		</gating:dimension>
+		<gating:mean>
+			<gating:coordinate data-type:value="0.43096955128205133"/>
+			<gating:coordinate data-type:value="0.27106893647738206"/>
+		</gating:mean>
+		<gating:covarianceMatrix>
+			<gating:row>
+				<gating:entry data-type:value="0.10838226944460386"/>
+				<gating:entry data-type:value="0.024184533078080432"/>
+			</gating:row>
+			<gating:row>
+				<gating:entry data-type:value="0.024184533078080432"/>
+				<gating:entry data-type:value="0.05783791248878632"/>
+			</gating:row>
+		</gating:covarianceMatrix>
+		<gating:distanceSquare data-type:value="1"/>
+	</gating:EllipsoidGate>
+	<gating:RectangleGate gating:id="Gate81">
+		<gating:dimension gating:min="409484.09375" gating:max="3195796.75" gating:compensation-ref="uncompensated">
+			<data-type:fcs-dimension data-type:name="FSC-H"/>
+		</gating:dimension>
+		<gating:dimension gating:min="7302.146484375" gating:max="11051756" gating:compensation-ref="uncompensated">
+			<data-type:fcs-dimension data-type:name="GFP-A"/>
+		</gating:dimension>
+	</gating:RectangleGate>
+	<gating:PolygonGate gating:id="Gate125">
+		<gating:dimension gating:compensation-ref="uncompensated" gating:transformation-ref="logarithmic_10000000_8">
+			<data-type:fcs-dimension data-type:name="APC-A"/>
+		</gating:dimension>
+		<gating:dimension gating:compensation-ref="uncompensated" gating:transformation-ref="linear_4194304_0">
+			<data-type:fcs-dimension data-type:name="SSC-H"/>
+		</gating:dimension>
+		<gating:vertex>
+			<gating:coordinate data-type:value="0.5740606936416185"/>
+			<gating:coordinate data-type:value="0.029490495668912417"/>
+		</gating:vertex>
+		<gating:vertex>
+			<gating:coordinate data-type:value="0.7044396274887604"/>
+			<gating:coordinate data-type:value="0.5193846246390761"/>
+		</gating:vertex>
+		<gating:vertex>
+			<gating:coordinate data-type:value="0.9857498394348105"/>
+			<gating:coordinate data-type:value="0.5116849133782483"/>
+		</gating:vertex>
+		<gating:vertex>
+			<gating:coordinate data-type:value="0.987034360950546"/>
+			<gating:coordinate data-type:value="0.03622774302213667"/>
+		</gating:vertex>
+		<gating:vertex>
+			<gating:coordinate data-type:value="0.5753452151573539"/>
+			<gating:coordinate data-type:value="0.023715712223291628"/>
+		</gating:vertex>
+		<gating:vertex>
+			<gating:coordinate data-type:value="0.5740606936416185"/>
+			<gating:coordinate data-type:value="0.029490495668912417"/>
+		</gating:vertex>
+	</gating:PolygonGate>
+	<gating:EllipsoidGate gating:id="Gate60">
+		<gating:dimension gating:compensation-ref="uncompensated" gating:transformation-ref="linear_4194304_0">
+			<data-type:fcs-dimension data-type:name="FSC-H"/>
+		</gating:dimension>
+		<gating:dimension gating:compensation-ref="uncompensated" gating:transformation-ref="linear_4194304_0">
+			<data-type:fcs-dimension data-type:name="SSC-H"/>
+		</gating:dimension>
+		<gating:mean>
+			<gating:coordinate data-type:value="0.43096955128205133"/>
+			<gating:coordinate data-type:value="0.27106893647738206"/>
+		</gating:mean>
+		<gating:covarianceMatrix>
+			<gating:row>
+				<gating:entry data-type:value="0.10838226944460386"/>
+				<gating:entry data-type:value="0.024184533078080432"/>
+			</gating:row>
+			<gating:row>
+				<gating:entry data-type:value="0.024184533078080432"/>
+				<gating:entry data-type:value="0.05783791248878632"/>
+			</gating:row>
+		</gating:covarianceMatrix>
+		<gating:distanceSquare data-type:value="1"/>
+	</gating:EllipsoidGate>
+	<gating:RectangleGate gating:id="Gate82">
+		<gating:dimension gating:min="409484.09375" gating:max="3195796.75" gating:compensation-ref="uncompensated">
+			<data-type:fcs-dimension data-type:name="FSC-H"/>
+		</gating:dimension>
+		<gating:dimension gating:min="7302.146484375" gating:max="11051756" gating:compensation-ref="uncompensated">
+			<data-type:fcs-dimension data-type:name="GFP-A"/>
+		</gating:dimension>
+	</gating:RectangleGate>
+	<gating:PolygonGate gating:id="Gate126">
+		<gating:dimension gating:compensation-ref="uncompensated" gating:transformation-ref="logarithmic_10000000_8">
+			<data-type:fcs-dimension data-type:name="APC-A"/>
+		</gating:dimension>
+		<gating:dimension gating:compensation-ref="uncompensated" gating:transformation-ref="linear_4194304_0">
+			<data-type:fcs-dimension data-type:name="SSC-H"/>
+		</gating:dimension>
+		<gating:vertex>
+			<gating:coordinate data-type:value="0.5740606936416185"/>
+			<gating:coordinate data-type:value="0.029490495668912417"/>
+		</gating:vertex>
+		<gating:vertex>
+			<gating:coordinate data-type:value="0.7044396274887604"/>
+			<gating:coordinate data-type:value="0.5193846246390761"/>
+		</gating:vertex>
+		<gating:vertex>
+			<gating:coordinate data-type:value="0.9857498394348105"/>
+			<gating:coordinate data-type:value="0.5116849133782483"/>
+		</gating:vertex>
+		<gating:vertex>
+			<gating:coordinate data-type:value="0.987034360950546"/>
+			<gating:coordinate data-type:value="0.03622774302213667"/>
+		</gating:vertex>
+		<gating:vertex>
+			<gating:coordinate data-type:value="0.5753452151573539"/>
+			<gating:coordinate data-type:value="0.023715712223291628"/>
+		</gating:vertex>
+		<gating:vertex>
+			<gating:coordinate data-type:value="0.5740606936416185"/>
+			<gating:coordinate data-type:value="0.029490495668912417"/>
+		</gating:vertex>
+	</gating:PolygonGate>
+	<gating:EllipsoidGate gating:id="Gate61">
+		<gating:dimension gating:compensation-ref="uncompensated" gating:transformation-ref="linear_4194304_0">
+			<data-type:fcs-dimension data-type:name="FSC-H"/>
+		</gating:dimension>
+		<gating:dimension gating:compensation-ref="uncompensated" gating:transformation-ref="linear_4194304_0">
+			<data-type:fcs-dimension data-type:name="SSC-H"/>
+		</gating:dimension>
+		<gating:mean>
+			<gating:coordinate data-type:value="0.43096955128205133"/>
+			<gating:coordinate data-type:value="0.27106893647738206"/>
+		</gating:mean>
+		<gating:covarianceMatrix>
+			<gating:row>
+				<gating:entry data-type:value="0.10838226944460386"/>
+				<gating:entry data-type:value="0.024184533078080432"/>
+			</gating:row>
+			<gating:row>
+				<gating:entry data-type:value="0.024184533078080432"/>
+				<gating:entry data-type:value="0.05783791248878632"/>
+			</gating:row>
+		</gating:covarianceMatrix>
+		<gating:distanceSquare data-type:value="1"/>
+	</gating:EllipsoidGate>
+	<gating:RectangleGate gating:id="Gate83">
+		<gating:dimension gating:min="409484.09375" gating:max="3195796.75" gating:compensation-ref="uncompensated">
+			<data-type:fcs-dimension data-type:name="FSC-H"/>
+		</gating:dimension>
+		<gating:dimension gating:min="7302.146484375" gating:max="11051756" gating:compensation-ref="uncompensated">
+			<data-type:fcs-dimension data-type:name="GFP-A"/>
+		</gating:dimension>
+	</gating:RectangleGate>
+	<gating:PolygonGate gating:id="Gate127">
+		<gating:dimension gating:compensation-ref="uncompensated" gating:transformation-ref="logarithmic_10000000_8">
+			<data-type:fcs-dimension data-type:name="APC-A"/>
+		</gating:dimension>
+		<gating:dimension gating:compensation-ref="uncompensated" gating:transformation-ref="linear_4194304_0">
+			<data-type:fcs-dimension data-type:name="SSC-H"/>
+		</gating:dimension>
+		<gating:vertex>
+			<gating:coordinate data-type:value="0.5740606936416185"/>
+			<gating:coordinate data-type:value="0.029490495668912417"/>
+		</gating:vertex>
+		<gating:vertex>
+			<gating:coordinate data-type:value="0.7044396274887604"/>
+			<gating:coordinate data-type:value="0.5193846246390761"/>
+		</gating:vertex>
+		<gating:vertex>
+			<gating:coordinate data-type:value="0.9857498394348105"/>
+			<gating:coordinate data-type:value="0.5116849133782483"/>
+		</gating:vertex>
+		<gating:vertex>
+			<gating:coordinate data-type:value="0.987034360950546"/>
+			<gating:coordinate data-type:value="0.03622774302213667"/>
+		</gating:vertex>
+		<gating:vertex>
+			<gating:coordinate data-type:value="0.5753452151573539"/>
+			<gating:coordinate data-type:value="0.023715712223291628"/>
+		</gating:vertex>
+		<gating:vertex>
+			<gating:coordinate data-type:value="0.5740606936416185"/>
+			<gating:coordinate data-type:value="0.029490495668912417"/>
+		</gating:vertex>
+	</gating:PolygonGate>
+	<gating:EllipsoidGate gating:id="Gate62">
+		<gating:dimension gating:compensation-ref="uncompensated" gating:transformation-ref="linear_4194304_0">
+			<data-type:fcs-dimension data-type:name="FSC-H"/>
+		</gating:dimension>
+		<gating:dimension gating:compensation-ref="uncompensated" gating:transformation-ref="linear_4194304_0">
+			<data-type:fcs-dimension data-type:name="SSC-H"/>
+		</gating:dimension>
+		<gating:mean>
+			<gating:coordinate data-type:value="0.43096955128205133"/>
+			<gating:coordinate data-type:value="0.27106893647738206"/>
+		</gating:mean>
+		<gating:covarianceMatrix>
+			<gating:row>
+				<gating:entry data-type:value="0.10838226944460386"/>
+				<gating:entry data-type:value="0.024184533078080432"/>
+			</gating:row>
+			<gating:row>
+				<gating:entry data-type:value="0.024184533078080432"/>
+				<gating:entry data-type:value="0.05783791248878632"/>
+			</gating:row>
+		</gating:covarianceMatrix>
+		<gating:distanceSquare data-type:value="1"/>
+	</gating:EllipsoidGate>
+	<gating:RectangleGate gating:id="Gate84">
+		<gating:dimension gating:min="409484.09375" gating:max="3195796.75" gating:compensation-ref="uncompensated">
+			<data-type:fcs-dimension data-type:name="FSC-H"/>
+		</gating:dimension>
+		<gating:dimension gating:min="7302.146484375" gating:max="11051756" gating:compensation-ref="uncompensated">
+			<data-type:fcs-dimension data-type:name="GFP-A"/>
+		</gating:dimension>
+	</gating:RectangleGate>
+	<gating:PolygonGate gating:id="Gate128">
+		<gating:dimension gating:compensation-ref="uncompensated" gating:transformation-ref="logarithmic_10000000_8">
+			<data-type:fcs-dimension data-type:name="APC-A"/>
+		</gating:dimension>
+		<gating:dimension gating:compensation-ref="uncompensated" gating:transformation-ref="linear_4194304_0">
+			<data-type:fcs-dimension data-type:name="SSC-H"/>
+		</gating:dimension>
+		<gating:vertex>
+			<gating:coordinate data-type:value="0.5740606936416185"/>
+			<gating:coordinate data-type:value="0.029490495668912417"/>
+		</gating:vertex>
+		<gating:vertex>
+			<gating:coordinate data-type:value="0.7044396274887604"/>
+			<gating:coordinate data-type:value="0.5193846246390761"/>
+		</gating:vertex>
+		<gating:vertex>
+			<gating:coordinate data-type:value="0.9857498394348105"/>
+			<gating:coordinate data-type:value="0.5116849133782483"/>
+		</gating:vertex>
+		<gating:vertex>
+			<gating:coordinate data-type:value="0.987034360950546"/>
+			<gating:coordinate data-type:value="0.03622774302213667"/>
+		</gating:vertex>
+		<gating:vertex>
+			<gating:coordinate data-type:value="0.5753452151573539"/>
+			<gating:coordinate data-type:value="0.023715712223291628"/>
+		</gating:vertex>
+		<gating:vertex>
+			<gating:coordinate data-type:value="0.5740606936416185"/>
+			<gating:coordinate data-type:value="0.029490495668912417"/>
+		</gating:vertex>
+	</gating:PolygonGate>
+	<gating:EllipsoidGate gating:id="Gate63">
+		<gating:dimension gating:compensation-ref="uncompensated" gating:transformation-ref="linear_4194304_0">
+			<data-type:fcs-dimension data-type:name="FSC-H"/>
+		</gating:dimension>
+		<gating:dimension gating:compensation-ref="uncompensated" gating:transformation-ref="linear_4194304_0">
+			<data-type:fcs-dimension data-type:name="SSC-H"/>
+		</gating:dimension>
+		<gating:mean>
+			<gating:coordinate data-type:value="0.43096955128205133"/>
+			<gating:coordinate data-type:value="0.27106893647738206"/>
+		</gating:mean>
+		<gating:covarianceMatrix>
+			<gating:row>
+				<gating:entry data-type:value="0.10838226944460386"/>
+				<gating:entry data-type:value="0.024184533078080432"/>
+			</gating:row>
+			<gating:row>
+				<gating:entry data-type:value="0.024184533078080432"/>
+				<gating:entry data-type:value="0.05783791248878632"/>
+			</gating:row>
+		</gating:covarianceMatrix>
+		<gating:distanceSquare data-type:value="1"/>
+	</gating:EllipsoidGate>
+	<gating:RectangleGate gating:id="Gate85">
+		<gating:dimension gating:min="409484.09375" gating:max="3195796.75" gating:compensation-ref="uncompensated">
+			<data-type:fcs-dimension data-type:name="FSC-H"/>
+		</gating:dimension>
+		<gating:dimension gating:min="7302.146484375" gating:max="11051756" gating:compensation-ref="uncompensated">
+			<data-type:fcs-dimension data-type:name="GFP-A"/>
+		</gating:dimension>
+	</gating:RectangleGate>
+	<gating:PolygonGate gating:id="Gate129">
+		<gating:dimension gating:compensation-ref="uncompensated" gating:transformation-ref="logarithmic_10000000_8">
+			<data-type:fcs-dimension data-type:name="APC-A"/>
+		</gating:dimension>
+		<gating:dimension gating:compensation-ref="uncompensated" gating:transformation-ref="linear_4194304_0">
+			<data-type:fcs-dimension data-type:name="SSC-H"/>
+		</gating:dimension>
+		<gating:vertex>
+			<gating:coordinate data-type:value="0.5740606936416185"/>
+			<gating:coordinate data-type:value="0.029490495668912417"/>
+		</gating:vertex>
+		<gating:vertex>
+			<gating:coordinate data-type:value="0.7044396274887604"/>
+			<gating:coordinate data-type:value="0.5193846246390761"/>
+		</gating:vertex>
+		<gating:vertex>
+			<gating:coordinate data-type:value="0.9857498394348105"/>
+			<gating:coordinate data-type:value="0.5116849133782483"/>
+		</gating:vertex>
+		<gating:vertex>
+			<gating:coordinate data-type:value="0.987034360950546"/>
+			<gating:coordinate data-type:value="0.03622774302213667"/>
+		</gating:vertex>
+		<gating:vertex>
+			<gating:coordinate data-type:value="0.5753452151573539"/>
+			<gating:coordinate data-type:value="0.023715712223291628"/>
+		</gating:vertex>
+		<gating:vertex>
+			<gating:coordinate data-type:value="0.5740606936416185"/>
+			<gating:coordinate data-type:value="0.029490495668912417"/>
+		</gating:vertex>
+	</gating:PolygonGate>
+	<gating:EllipsoidGate gating:id="Gate64">
+		<gating:dimension gating:compensation-ref="uncompensated" gating:transformation-ref="linear_4194304_0">
+			<data-type:fcs-dimension data-type:name="FSC-H"/>
+		</gating:dimension>
+		<gating:dimension gating:compensation-ref="uncompensated" gating:transformation-ref="linear_4194304_0">
+			<data-type:fcs-dimension data-type:name="SSC-H"/>
+		</gating:dimension>
+		<gating:mean>
+			<gating:coordinate data-type:value="0.43096955128205133"/>
+			<gating:coordinate data-type:value="0.27106893647738206"/>
+		</gating:mean>
+		<gating:covarianceMatrix>
+			<gating:row>
+				<gating:entry data-type:value="0.10838226944460386"/>
+				<gating:entry data-type:value="0.024184533078080432"/>
+			</gating:row>
+			<gating:row>
+				<gating:entry data-type:value="0.024184533078080432"/>
+				<gating:entry data-type:value="0.05783791248878632"/>
+			</gating:row>
+		</gating:covarianceMatrix>
+		<gating:distanceSquare data-type:value="1"/>
+	</gating:EllipsoidGate>
+	<gating:RectangleGate gating:id="Gate86">
+		<gating:dimension gating:min="409484.09375" gating:max="3195796.75" gating:compensation-ref="uncompensated">
+			<data-type:fcs-dimension data-type:name="FSC-H"/>
+		</gating:dimension>
+		<gating:dimension gating:min="7302.146484375" gating:max="11051756" gating:compensation-ref="uncompensated">
+			<data-type:fcs-dimension data-type:name="GFP-A"/>
+		</gating:dimension>
+	</gating:RectangleGate>
+	<gating:PolygonGate gating:id="Gate130">
+		<gating:dimension gating:compensation-ref="uncompensated" gating:transformation-ref="logarithmic_10000000_8">
+			<data-type:fcs-dimension data-type:name="APC-A"/>
+		</gating:dimension>
+		<gating:dimension gating:compensation-ref="uncompensated" gating:transformation-ref="linear_4194304_0">
+			<data-type:fcs-dimension data-type:name="SSC-H"/>
+		</gating:dimension>
+		<gating:vertex>
+			<gating:coordinate data-type:value="0.5740606936416185"/>
+			<gating:coordinate data-type:value="0.029490495668912417"/>
+		</gating:vertex>
+		<gating:vertex>
+			<gating:coordinate data-type:value="0.7044396274887604"/>
+			<gating:coordinate data-type:value="0.5193846246390761"/>
+		</gating:vertex>
+		<gating:vertex>
+			<gating:coordinate data-type:value="0.9857498394348105"/>
+			<gating:coordinate data-type:value="0.5116849133782483"/>
+		</gating:vertex>
+		<gating:vertex>
+			<gating:coordinate data-type:value="0.987034360950546"/>
+			<gating:coordinate data-type:value="0.03622774302213667"/>
+		</gating:vertex>
+		<gating:vertex>
+			<gating:coordinate data-type:value="0.5753452151573539"/>
+			<gating:coordinate data-type:value="0.023715712223291628"/>
+		</gating:vertex>
+		<gating:vertex>
+			<gating:coordinate data-type:value="0.5740606936416185"/>
+			<gating:coordinate data-type:value="0.029490495668912417"/>
+		</gating:vertex>
+	</gating:PolygonGate>
+	<gating:EllipsoidGate gating:id="Gate65">
+		<gating:dimension gating:compensation-ref="uncompensated" gating:transformation-ref="linear_4194304_0">
+			<data-type:fcs-dimension data-type:name="FSC-H"/>
+		</gating:dimension>
+		<gating:dimension gating:compensation-ref="uncompensated" gating:transformation-ref="linear_4194304_0">
+			<data-type:fcs-dimension data-type:name="SSC-H"/>
+		</gating:dimension>
+		<gating:mean>
+			<gating:coordinate data-type:value="0.43096955128205133"/>
+			<gating:coordinate data-type:value="0.27106893647738206"/>
+		</gating:mean>
+		<gating:covarianceMatrix>
+			<gating:row>
+				<gating:entry data-type:value="0.10838226944460386"/>
+				<gating:entry data-type:value="0.024184533078080432"/>
+			</gating:row>
+			<gating:row>
+				<gating:entry data-type:value="0.024184533078080432"/>
+				<gating:entry data-type:value="0.05783791248878632"/>
+			</gating:row>
+		</gating:covarianceMatrix>
+		<gating:distanceSquare data-type:value="1"/>
+	</gating:EllipsoidGate>
+	<gating:RectangleGate gating:id="Gate87">
+		<gating:dimension gating:min="409484.09375" gating:max="3195796.75" gating:compensation-ref="uncompensated">
+			<data-type:fcs-dimension data-type:name="FSC-H"/>
+		</gating:dimension>
+		<gating:dimension gating:min="7302.146484375" gating:max="11051756" gating:compensation-ref="uncompensated">
+			<data-type:fcs-dimension data-type:name="GFP-A"/>
+		</gating:dimension>
+	</gating:RectangleGate>
+	<gating:PolygonGate gating:id="Gate131">
+		<gating:dimension gating:compensation-ref="uncompensated" gating:transformation-ref="logarithmic_10000000_8">
+			<data-type:fcs-dimension data-type:name="APC-A"/>
+		</gating:dimension>
+		<gating:dimension gating:compensation-ref="uncompensated" gating:transformation-ref="linear_4194304_0">
+			<data-type:fcs-dimension data-type:name="SSC-H"/>
+		</gating:dimension>
+		<gating:vertex>
+			<gating:coordinate data-type:value="0.5740606936416185"/>
+			<gating:coordinate data-type:value="0.029490495668912417"/>
+		</gating:vertex>
+		<gating:vertex>
+			<gating:coordinate data-type:value="0.7044396274887604"/>
+			<gating:coordinate data-type:value="0.5193846246390761"/>
+		</gating:vertex>
+		<gating:vertex>
+			<gating:coordinate data-type:value="0.9857498394348105"/>
+			<gating:coordinate data-type:value="0.5116849133782483"/>
+		</gating:vertex>
+		<gating:vertex>
+			<gating:coordinate data-type:value="0.987034360950546"/>
+			<gating:coordinate data-type:value="0.03622774302213667"/>
+		</gating:vertex>
+		<gating:vertex>
+			<gating:coordinate data-type:value="0.5753452151573539"/>
+			<gating:coordinate data-type:value="0.023715712223291628"/>
+		</gating:vertex>
+		<gating:vertex>
+			<gating:coordinate data-type:value="0.5740606936416185"/>
+			<gating:coordinate data-type:value="0.029490495668912417"/>
+		</gating:vertex>
+	</gating:PolygonGate>
+	<gating:EllipsoidGate gating:id="Gate44">
+		<gating:dimension gating:compensation-ref="uncompensated" gating:transformation-ref="linear_4194304_0">
+			<data-type:fcs-dimension data-type:name="FSC-H"/>
+		</gating:dimension>
+		<gating:dimension gating:compensation-ref="uncompensated" gating:transformation-ref="linear_4194304_0">
+			<data-type:fcs-dimension data-type:name="SSC-H"/>
+		</gating:dimension>
+		<gating:mean>
+			<gating:coordinate data-type:value="0.43096955128205133"/>
+			<gating:coordinate data-type:value="0.27106893647738206"/>
+		</gating:mean>
+		<gating:covarianceMatrix>
+			<gating:row>
+				<gating:entry data-type:value="0.10838226944460386"/>
+				<gating:entry data-type:value="0.024184533078080432"/>
+			</gating:row>
+			<gating:row>
+				<gating:entry data-type:value="0.024184533078080432"/>
+				<gating:entry data-type:value="0.05783791248878632"/>
+			</gating:row>
+		</gating:covarianceMatrix>
+		<gating:distanceSquare data-type:value="1"/>
+	</gating:EllipsoidGate>
+	<gating:RectangleGate gating:id="Gate66">
+		<gating:dimension gating:min="409484.09375" gating:max="3195796.75" gating:compensation-ref="uncompensated">
+			<data-type:fcs-dimension data-type:name="FSC-H"/>
+		</gating:dimension>
+		<gating:dimension gating:min="7302.146484375" gating:max="11051756" gating:compensation-ref="uncompensated">
+			<data-type:fcs-dimension data-type:name="GFP-A"/>
+		</gating:dimension>
+	</gating:RectangleGate>
+	<gating:PolygonGate gating:id="Gate110">
+		<gating:dimension gating:compensation-ref="uncompensated" gating:transformation-ref="logarithmic_10000000_8">
+			<data-type:fcs-dimension data-type:name="APC-A"/>
+		</gating:dimension>
+		<gating:dimension gating:compensation-ref="uncompensated" gating:transformation-ref="linear_4194304_0">
+			<data-type:fcs-dimension data-type:name="SSC-H"/>
+		</gating:dimension>
+		<gating:vertex>
+			<gating:coordinate data-type:value="0.5740606936416185"/>
+			<gating:coordinate data-type:value="0.029490495668912417"/>
+		</gating:vertex>
+		<gating:vertex>
+			<gating:coordinate data-type:value="0.7044396274887604"/>
+			<gating:coordinate data-type:value="0.5193846246390761"/>
+		</gating:vertex>
+		<gating:vertex>
+			<gating:coordinate data-type:value="0.9857498394348105"/>
+			<gating:coordinate data-type:value="0.5116849133782483"/>
+		</gating:vertex>
+		<gating:vertex>
+			<gating:coordinate data-type:value="0.987034360950546"/>
+			<gating:coordinate data-type:value="0.03622774302213667"/>
+		</gating:vertex>
+		<gating:vertex>
+			<gating:coordinate data-type:value="0.5753452151573539"/>
+			<gating:coordinate data-type:value="0.023715712223291628"/>
+		</gating:vertex>
+		<gating:vertex>
+			<gating:coordinate data-type:value="0.5740606936416185"/>
+			<gating:coordinate data-type:value="0.029490495668912417"/>
+		</gating:vertex>
+	</gating:PolygonGate>
+	<transforms:transformation transforms:id="logarithmic_100000002004087730000_20.000099182128906">
+		<transforms:flog transforms:T="100000002004087730000" transforms:M="20.000099182128906"/>
+	</transforms:transformation>
+	<transforms:transformation transforms:id="linear_4194304_0">
+		<transforms:flin transforms:T="4194304" transforms:A="0"/>
+	</transforms:transformation>
+	<transforms:transformation transforms:id="logarithmic_10000000_8">
+		<transforms:flog transforms:T="10000000" transforms:M="8"/>
+	</transforms:transformation>
+	<transforms:transformation transforms:id="logarithmic_99999998430674940_17.000099182128906">
+		<transforms:flog transforms:T="99999998430674940" transforms:M="17.000099182128906"/>
+	</transforms:transformation>
+	<transforms:transformation transforms:id="logarithmic_9.999999778196308e+21_22.000099182128906">
+		<transforms:flog transforms:T="9.999999778196308e+21" transforms:M="22.000099182128906"/>
+	</transforms:transformation>
+	<transforms:transformation transforms:id="logarithmic_9.999999778196308e+22_23.000099182128906">
+		<transforms:flog transforms:T="9.999999778196308e+22" transforms:M="23.000099182128906"/>
+	</transforms:transformation>
+	<transforms:transformation transforms:id="logarithmic_1.0000000200408773e+21_21.000099182128906">
+		<transforms:flog transforms:T="1.0000000200408773e+21" transforms:M="21.000099182128906"/>
+	</transforms:transformation>
+	<transforms:transformation transforms:id="logarithmic_9999999980506448000_19.000099182128906">
+		<transforms:flog transforms:T="9999999980506448000" transforms:M="19.000099182128906"/>
+	</transforms:transformation>
+	<transforms:transformation transforms:id="logarithmic_999999984306749400_18.000099182128906">
+		<transforms:flog transforms:T="999999984306749400" transforms:M="18.000099182128906"/>
+	</transforms:transformation>
+	<transforms:transformation transforms:id="logarithmic_10000000272564224_16.000099182128906">
+		<transforms:flog transforms:T="10000000272564224" transforms:M="16.000099182128906"/>
+	</transforms:transformation>
+	<transforms:transformation transforms:id="logarithmic_Infinity_57.000099182128906">
+		<transforms:flog transforms:T="Infinity" transforms:M="57.000099182128906"/>
+	</transforms:transformation>
+	<transforms:transformation transforms:id="logarithmic_Infinity_40.000099182128906">
+		<transforms:flog transforms:T="Infinity" transforms:M="40.000099182128906"/>
+	</transforms:transformation>
+	<transforms:transformation transforms:id="logarithmic_Infinity_42.000099182128906">
+		<transforms:flog transforms:T="Infinity" transforms:M="42.000099182128906"/>
+	</transforms:transformation>
+</gating:Gating-ML>
